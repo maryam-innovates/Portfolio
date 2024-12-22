@@ -9,18 +9,27 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: #0d6efd;
+            background-color: #252850;
             color: white;
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
         }
 
         nav ul {
@@ -38,74 +47,97 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            position: relative;
         }
 
-        nav ul li a:hover {
-            color: #ffdd59;
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ffdd59;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
         }
 
         .container {
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
         }
 
         .certifications, .projects {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .certifications h2, .projects h2 {
-            color: #0d6efd;
+            color: #252850;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
         }
 
         .certificates-gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
         }
 
         .certificates-gallery img {
-            width: 250px;
+            width: 280px;
             height: auto;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: perspective(800px) rotateY(0deg) scale(1);
+            transition: transform 0.5s, box-shadow 0.5s;
         }
 
         .certificates-gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: #0d6efd;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 3rem;
+            transform: perspective(800px) rotateY(10deg) scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
 
         .header-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .header-links a {
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            background-color: #8fd3f4;
+            padding: 0.8rem 1.5rem;
+            background-color: #66a6ff;
             color: white;
-            border-radius: 5px;
+            border-radius: 25px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .header-links a:hover {
-            background-color: #0d6efd;
+            background-color: #252850;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #252850;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -131,7 +163,7 @@
                 <img src="cs50.jpg" alt="CS50 Certificate">
                 <img src="softskills.jpg" alt="Google Soft Skills Certificate">
                 <img src="volunteer.jpg" alt="Psych.4Teens Volunteering Certificate">
-                 <img src="hplife.jpg" alt="HP Life Certificate">
+                <img src="hplife.jpg" alt="HP Life Certificate">
                 <img src="hourcode.jpg" alt="Hour Of Code">
             </div>
         </section>
