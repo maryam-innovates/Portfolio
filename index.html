@@ -9,13 +9,13 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             color: #333;
             overflow-x: hidden;
         }
 
         header {
-            background-color: #252850;
+            background-color: #1c1c3c;
             color: white;
             padding: 1rem 2rem;
             display: flex;
@@ -48,13 +48,18 @@
             text-decoration: none;
             font-weight: bold;
             position: relative;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00f2fe;
         }
 
         nav ul li a::after {
             content: '';
             width: 0;
             height: 3px;
-            background: #ffdd59;
+            background: #00f2fe;
             position: absolute;
             left: 0;
             bottom: -3px;
@@ -75,8 +80,8 @@
         }
 
         .certifications h2, .projects h2 {
-            color: #252850;
-            font-size: 2rem;
+            color: #1c1c3c;
+            font-size: 2.2rem;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
@@ -113,7 +118,7 @@
         .header-links a {
             text-decoration: none;
             padding: 0.8rem 1.5rem;
-            background-color: #66a6ff;
+            background-color: #00f2fe;
             color: white;
             border-radius: 25px;
             font-weight: bold;
@@ -122,12 +127,12 @@
         }
 
         .header-links a:hover {
-            background-color: #252850;
+            background-color: #1c1c3c;
             transform: scale(1.1);
         }
 
         footer {
-            background-color: #252850;
+            background-color: #1c1c3c;
             color: white;
             text-align: center;
             padding: 1rem;
@@ -163,7 +168,7 @@
                 <img src="cs50.jpg" alt="CS50 Certificate">
                 <img src="softskills.jpg" alt="Google Soft Skills Certificate">
                 <img src="volunteer.jpg" alt="Psych.4Teens Volunteering Certificate">
-                <img src="elementsofai.png" alt="Elements of Ai">
+                <img src="elementsofai.png" alt="Elements Of AI">
                 <img src="hplife.jpg" alt="HP Life Certificate">
                 <img src="hourcode.jpg" alt="Hour Of Code">
             </div>
