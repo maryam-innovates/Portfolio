@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz - Study Plan</title>
+    <title>Maryam Nawaz - Personal Portfolio</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            color: #f0f0f0;
+            background: #f4f4f4;
+            color: #333;
         }
 
         header {
-            background-color: #1c1c1c;
-            color: #f0f0f0;
+            background-color: #1a1a40;
+            color: white;
             padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         nav ul {
@@ -38,42 +35,68 @@
         }
 
         nav ul li a {
-            color: #f0f0f0;
+            color: white;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #00adb5;
+            color: #ff6f61;
         }
 
         .container {
             padding: 2rem;
+            text-align: center;
         }
 
-        .content-section {
-            margin-bottom: 3rem;
+        .study-plan {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .content-section h2 {
-            color: #00adb5;
-            margin-bottom: 1rem;
+        .study-plan h2 {
+            color: #1a1a40;
         }
 
-        .essay {
-            background: #1c1c1c;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        .study-plan p {
+            line-height: 1.6;
+        }
+
+        .essay-section {
+            margin-top: 2rem;
         }
 
         footer {
-            background-color: #1c1c1c;
-            color: #f0f0f0;
+            background-color: #1a1a40;
+            color: white;
             text-align: center;
             padding: 1rem;
             margin-top: 3rem;
+        }
+
+        .certificates-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .certificates-gallery img {
+            width: 250px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .certificates-gallery img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -92,17 +115,14 @@
     </header>
 
     <div class="container">
-        <section class="content-section">
+        <section class="study-plan">
             <h2>Study Plan</h2>
-            <p>Welcome to my study plan page, where I share my academic goals, strategies, and resources.</p>
-        </section>
+            <p>Here, I outline my educational goals and strategies to achieve them. My study plan focuses on excelling in academics, pursuing extracurricular activities, and enhancing my technical skills.</p>
 
-        <section class="content-section">
-            <h2>Essay</h2>
-            <div class="essay">
-                <p><strong>Title:</strong> "My Academic Journey and Aspirations"</p>
-                <p>My name is Maryam Nawaz, and my academic journey has been one of passion, perseverance, and purpose...</p>
-                <!-- Add the full essay content here -->
+            <div class="essay-section">
+                <h3>My Essay</h3>
+                <p>"Education is the foundation of a progressive society, and my goal is to utilize my learning to make a meaningful impact on the world."</p>
+                <p>This essay outlines my academic journey and aspirations, highlighting my passion for learning and growth.</p>
             </div>
         </section>
     </div>
