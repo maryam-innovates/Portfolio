@@ -3,118 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #6e7dff, #ff6a6a);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 15px 0;
-            z-index: 999;
-            background-color: #1f2937;
-        }
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-            letter-spacing: 2px;
-        }
-        .cta-btn {
-            padding: 15px 40px;
-            font-size: 1.3rem;
-            background-color: #ff6347;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            cursor: pointer;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-btn:hover {
-            background-color: #ff4537;
-            transform: translateY(-5px);
-        }
-        
-                nav {
-            background-color: #333;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        
-        .navbar {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .navbar li {
-            margin: 0 15px;
-        }
-        
-        .nav-link {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:visited,
-        .nav-link:link {
-            color: #fff;
-        }
-        
-        .nav-link:hover {
-            color: #ff7f50;
-        }
-        
-        .nav-link.active {
-            color: #ff7f50;
-}
-        footer {
-            position: fixed;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 1rem;
-        }
-    </style>
+    <title>Maryam Nawaz Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="extracurriculars.html" class="nav-link">Extracurriculars</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="studyplan.html" class="nav-link">Study Plan</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Welcome to My Portfolio</h1>
-    <button class="cta-btn">Explore My Work</button>
+
+    <section class="intro">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Maryam Nawaz, a passionate student from Lahore, Pakistan, with a keen interest in technology, AI, and full-stack web development.</p>
+    </section>
+
+    <section class="bio">
+        <h2>About Me</h2>
+        <p>I am currently studying Computer Science, Physics, and Mathematics in high school. My journey began with a love for technology, and now I’m focused on AI and developing tools that can make a difference in people's lives.</p>
+    </section>
+
     <footer>
-        <p>Made with ❤️ by Maryam Nawaz</p>
+        <p>Contact: <a href="mailto:maryamstudent0430@gmail.com">maryamstudent0430@gmail.com</a></p>
     </footer>
 </body>
 </html>
+
 
