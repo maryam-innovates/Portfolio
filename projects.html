@@ -4,33 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Maryam Nawaz</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 50px 20px;
+        }
+        .projects-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-card {
+            background-color: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .project-card h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff6347;
+        }
+        .project-card p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #666;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="projects-content">
-        <h1>My Projects</h1>
+    <div class="projects-content">
         <div class="project-card">
-            <h2>Rock-Paper-Scissors Game</h2>
-            <p>A simple interactive game using HTML, CSS, and JavaScript.</p>
+            <h2>Web Platform - ProjectConnect</h2>
+            <p>A platform designed to connect students with opportunities in academics and extracurriculars.</p>
         </div>
+
         <div class="project-card">
-            <h2>Quiz Website</h2>
-            <p>A fully responsive quiz platform that tracks user progress.</p>
+            <h2>Student Resource Website</h2>
+            <p>A website dedicated to helping students access valuable resources for their growth and success.</p>
         </div>
-    </section>
+    </div>
     <footer>
-        <p>Follow me: <a href="https://www.linkedin.com/in/maryam-nawaz">LinkedIn</a> | <a href="mailto:maryamstudent0430@gmail.com">Email</a></p>
+        <p>Explore more by reaching out to me!</p>
     </footer>
 </body>
 </html>
