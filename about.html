@@ -3,67 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Maryam Nawaz</title>
+    <title>About Me - Maryam Nawaz</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
             color: #333;
-            padding: 50px 20px;
         }
-        .about-content {
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff7f50;
+        }
+
+        .nav-link.active {
+            color: #ff7f50;
+        }
+
+        /* Main Section Styles */
+        section {
+            padding: 40px 20px;
             text-align: center;
-            max-width: 900px;
-            margin: auto;
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
-        h1 {
-            font-size: 3rem;
+
+        /* About Me Section */
+        .about-me {
+            margin-bottom: 40px;
+        }
+
+        .about-me h2 {
+            font-size: 30px;
             margin-bottom: 20px;
-            color: #1f2937;
-            font-weight: 700;
         }
-        h2 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            color: #ff6347;
-            text-transform: uppercase;
+
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+            text-align: justify;
         }
-        ul {
-            list-style-type: square;
-            margin-left: 30px;
-            font-size: 1.2rem;
+
+        .about-me img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
         }
-        ul li {
+
+        /* Essay Section */
+        .essay-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .essay-section h2 {
+            font-size: 25px;
+            color: #ff7f50;
+        }
+
+        .essay-section p {
+            font-size: 18px;
+            line-height: 1.6;
             margin: 10px 0;
         }
+
+        /* Study Plan Section */
+        .study-plan-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .study-plan-section h2 {
+            font-size: 25px;
+            color: #ff7f50;
+        }
+
+        .study-plan-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
         footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #666;
+            background-color: #333;
+            color: #fff;
             text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="about-content">
-        <h1>About Me</h1>
-        <p>Hi, I'm Maryam Nawaz, a passionate student of technology and personal development. I enjoy working on innovative projects and am committed to my growth as an individual.</p>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About Me</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="extracurriculars.html" class="nav-link">Extracurriculars</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="studyplan.html" class="nav-link">Study Plan</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>My Goals & Aspirations</h2>
-        <ul>
-            <li>Complete my studies in computer science and engineering.</li>
-            <li>Contribute to impactful tech solutions in the world.</li>
-            <li>Help others through my skills and leadership.</li>
-        </ul>
-    </div>
+    <section class="about-me">
+        <h2>About Me</h2>
+        <img src="certs/your-photo.jpg" alt="Maryam Nawaz">
+        <p>
+            Hi, I'm Maryam Nawaz, a passionate learner and aspiring student from Lahore, Pakistan. Currently studying at Govt Postgraduate College For Women, Lahore, I have always been interested in exploring fields like computer science, data science, and AI. Along with my academic pursuits, I’m deeply involved in extracurricular activities that contribute to both my personal and professional growth. My goal is to gain admission to a top university, where I can pursue my dream of studying a dual degree in business and technology.
+        </p>
+    </section>
 
+    <section class="essay-section">
+        <h2>My Essay: Why I Want to Study in a Prestigious University</h2>
+        <p>
+            Being someone with a deep passion for technology, I have always been fascinated by the ways in which artificial intelligence and data science are shaping the future. I believe that attending a prestigious university will not only give me access to world-class resources and professors but will also enable me to be part of an environment that thrives on innovation and excellence. My vision is to leverage these resources to develop solutions that bridge the gap between technology and business, thereby contributing to solving real-world challenges.
+        </p>
+        <p>
+            In the future, I hope to use the knowledge and experiences gained at a prestigious institution to make meaningful contributions to society, especially in the field of AI, where there is tremendous potential to improve lives.
+        </p>
+    </section>
+
+    <section class="study-plan-section">
+        <h2>My Study Plan</h2>
+        <p>
+            To achieve my academic and professional goals, I have outlined a study plan that focuses on both theoretical knowledge and practical application. My plan includes taking advanced courses in computer science, AI, and data science while also engaging in internships and research opportunities. These experiences will allow me to gain hands-on experience and refine my problem-solving skills.
+        </p>
+        <p>
+            I also plan to supplement my academic work by participating in extracurricular activities that will help me build leadership and teamwork skills. I believe that striking a balance between academics and extracurriculars will enable me to thrive both personally and professionally. Through hard work and dedication, I am confident that I will be able to excel in my studies and achieve my long-term career goals.
+        </p>
+    </section>
     <footer>
-        <p>Feel free to connect with me via the contact page!</p>
+        <p>Contact: <a href="mailto:maryamstudent0430@gmail.com">maryamstudent0430@gmail.com</a></p>
     </footer>
 </body>
 </html>
+
+          
