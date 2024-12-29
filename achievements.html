@@ -3,41 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements | Maryam Nawaz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Achievements - Maryam Nawaz</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff7f50;
+        }
+
+        .nav-link.active {
+            color: #ff7f50;
+        }
+
+        /* Main Section Styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Achievements and Certifications */
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .cert-item {
+            margin: 15px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .cert-item h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .cert-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="extracurriculars.html" class="nav-link">Extracurriculars</a></li>
+                <li><a href="achievements.html" class="nav-link active">Achievements</a></li>
+                <li><a href="studyplan.html" class="nav-link">Study Plan</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+            </ul>
+        </nav>
     </header>
-
     <section class="achievements">
-        <h2>My Achievements</h2>
-        <p>Here are some of the certifications I've earned:</p>
-        <ul>
-            <li>
-                <h3>CS50 - Harvard</h3>
-                <a href="https://github.com/maryam-innovates/certs/CS50_certificate.pdf" target="_blank">View Certificate</a>
-            </li>
-            <li>
-                <h3>Effective Business Web Course by HP Life</h3>
-                <a href="https://github.com/maryam-innovates/certs/hp-life-business-web.pdf" target="_blank">View Certificate</a>
-            </li>
-            <li>
-                <h3>Google Soft Skills Certification</h3>
-                <a href="https://github.com/maryam-innovates/certs/google-soft-skills.pdf" target="_blank">View Certificate</a>
-            </li>
-        </ul>
-    </section>
+        <h1>My Achievements</h1>
 
+        <div class="cert-item">
+            <h3>Harvard CS50 Certificate</h3>
+            <a href="certs/CS50_certificate.pdf" target="_blank">Download Certificate</a>
+            <img src="certs/CS50_certificate.jpg" alt="Harvard CS50 Certificate" class="cert-image">
+        </div>
+
+        <div class="cert-item">
+            <h3>HP Life - Effective Business Web Certificate</h3>
+            <a href="certs/HP_Life_certificate.pdf" target="_blank">Download Certificate</a>
+            <img src="certs/HP_Life_certificate.jpg" alt="HP Life Certificate" class="cert-image">
+        </div>
+
+        <div class="cert-item">
+            <h3>Google Soft Skills Certificate</h3>
+            <a href="certs/Google_Soft_Skills_certificate.pdf" target="_blank">Download Certificate</a>
+            <img src="certs/Google_Soft_Skills_certificate.jpg" alt="Google Soft Skills Certificate" class="cert-image">
+        </div>
+        <!-- Add more certificates here -->
+    </section>
     <footer>
-        <p>Copyright &copy; 2024 Maryam Nawaz. All rights reserved.</p>
+        <p>Contact: <a href="mailto:maryamstudent0430@gmail.com">maryamstudent0430@gmail.com</a></p>
     </footer>
 </body>
 </html>
