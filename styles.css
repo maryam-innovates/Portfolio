@@ -1,226 +1,48 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
 }
 
-h1, h2, h3 {
-    color: #1a1a1a;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-.navbar a {
-    margin: 0 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.navbar a:hover {
-    color: #f4f4f4;
-}
-
-/* Hero Section */
-.hero {
-    background: #007bff;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    background-color: #f4f4f4;
-    color: #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.cta-btn:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-/* Section Styles */
-section {
-    padding: 40px 20px;
-}
-
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-/* About Section */
-.about p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Projects Section */
-.projects ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.projects li {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.projects li h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.projects li p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.projects li a {
-    color: #007bff;
-}
-
-.projects li a:hover {
-    color: #0056b3;
-}
-
-/* Achievements Section */
-.achievements ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.achievements li {
-    margin-bottom: 20px;
-}
-
-.achievements li h3 {
-    font-size: 24px;
-}
-
-.achievements li a {
-    color: #007bff;
-    font-size: 18px;
-}
-
-.achievements li a:hover {
-    color: #0056b3;
-}
-
-/* Contact Section */
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
+header {
+    background-color: #0099ff;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.contact button {
-    background-color: #007bff;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.contact button:hover {
-    background-color: #0056b3;
+nav ul li a:hover {
+    color: #ff6347;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #0099ff;
     color: white;
-    padding: 20px 0;
     text-align: center;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar a {
-        font-size: 16px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .cta-btn {
-        font-size: 16px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
-
-    .projects li, .achievements li {
-        padding: 15px;
-    }
-
-    .contact form {
-        padding: 15px;
-    }
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
