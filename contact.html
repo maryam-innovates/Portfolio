@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Maryam Nawaz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact - Maryam Nawaz</title>
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="contact.html">Contact</a>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Your Name:</label>
+    <section class="contact-content">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out to me for collaboration or inquiries!</p>
+        <form>
+            <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
+            <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
-
             <button type="submit">Send Message</button>
         </form>
     </section>
-
     <footer>
-        <p>Copyright &copy; 2024 Maryam Nawaz. All rights reserved.</p>
+        <p>Follow me: <a href="https://www.linkedin.com/in/maryam-nawaz">LinkedIn</a> | <a href="mailto:maryamstudent0430@gmail.com">Email</a></p>
     </footer>
 </body>
 </html>
