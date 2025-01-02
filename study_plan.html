@@ -3,259 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Plan - Maryam Nawaz</title>
+    <title>Result Card GPA Conversion</title>
     <style>
-        /* Reset and base styles */
-        body, html {
+        /* CSS for Layout, Color Scheme, and Responsiveness */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background: #f8f9fa;
-            color: #333;
-            height: 100%;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-bottom: 3px solid #ff6347;
-            position: relative;
+        h1 {
+            color: #007bff;
         }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin: 0;
+
+        .study-plan {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 20px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .hero p {
-            font-size: 1.2rem;
+
+        .study-plan h2 {
+            color: #007bff;
+        }
+
+        .study-plan p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
             margin-top: 20px;
         }
 
-        /* Section Styles */
-        .container {
-            padding: 40px 20px;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .intro h2 {
-            font-size: 2.5rem;
-            color: #ff6347;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        /* Educational History Section */
-        .education {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .education-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-
-        .education-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .education-card img {
-            width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .education-card img:hover {
-            transform: scale(1.05);
-        }
-
-        .education-card h3 {
-            color: #ff6347;
-            font-size: 1.8rem;
-            margin-top: 15px;
-        }
-
-        .education-card p {
-            font-size: 1.1rem;
-            color: #777;
-        }
-
-        /* Personal Statement Section */
-        .personal-statement {
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-top: 40px;
-        }
-
-        .personal-statement h2 {
-            color: #ff6347;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .personal-statement p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        /* Fullscreen Image Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal img {
-            max-width: 80%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-
-        .modal .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 2rem;
-            color: #fff;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Buttons */
-        .fullscreen-btn, .action-btn {
-            background-color: #ff6347;
+        button {
+            background-color: #007bff;
             color: white;
+            border: none;
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 15px;
+            font-size: 1rem;
+            margin-top: 20px;
         }
 
-        .fullscreen-btn:hover, .action-btn:hover {
-            background-color: #e74c3c;
+        button:hover {
+            background-color: #0056b3;
         }
 
-        .action-btn {
-            margin-top: 10px;
-        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
 
+            .study-plan {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Maryam Nawaz</h1>
-        <p>Tech Enthusiast | Full-Stack Developer in the Making | Aspiring AI Innovator</p>
+    <div class="container">
+        <h1>Result Card GPA Conversion</h1>
+        
+        <!-- Image Section for the Result Card -->
+        <img src="images/result-card.png" alt="Result Card">
+
+        <!-- Study Plan Section -->
+        <section class="study-plan">
+            <h2>My Study Plan</h2>
+            <p>
+                This is my personal statement and study plan. I aim to focus on maximizing my potential in the coming years by actively engaging in various extracurricular activities, academic projects, and community service. 
+                I am determined to pursue a dual degree in business and data science, as I am passionate about learning and growing in these fields.
+            </p>
+            <p>
+                I am committed to continuously developing my skills, exploring new interests, and making a positive impact in the world around me.
+            </p>
+        </section>
+
+        <!-- GPA Conversion Button -->
+        <button onclick="convertGPA()">Convert GPA</button>
     </div>
 
-    <!-- Introduction Section -->
-    <div class="container intro">
-        <h2>Brief Introduction</h2>
-        <p>I’m Maryam, a passionate tech enthusiast from Lahore, Pakistan. Currently, I am focusing on Computer Science, Physics, and Mathematics, with a deep interest in becoming a full-stack web developer, particularly specializing in AI development. My journey includes a variety of exciting achievements and personal projects in the tech field, which I believe will allow me to contribute significantly to the industry.</p>
-    </div>
-
-    <!-- Educational History Section -->
-    <div class="container education">
-        <div class="education-card">
-            <img src="certs/3GradeMe.jpg" alt="3rd Grade Achievement" onclick="openModal()">
-            <h3>3rd Grade Achievement</h3>
-            <p>Received recognition for outstanding academic performance and was actively involved in extracurricular activities.</p>
-            <button class="action-btn" onclick="translateText('3rd Grade Achievement')">Translate</button>
-            <button class="action-btn" onclick="convertGPA()">GPA Conversion</button>
-        </div>
-
-        <div class="education-card">
-            <img src="certs/character-certificate.jpg" alt="Character Certificate">
-            <h3>Character Certificate</h3>
-            <p>Awarded for exceptional character and contributions to school life.</p>
-        </div>
-
-        <div class="education-card">
-            <img src="certs/result_card.jpg" alt="Grade 9-10 Transcript">
-            <h3>Grade 9-10 Achievements</h3>
-            <p>Academic excellence in the subjects of Computer Science, Physics, and Mathematics.</p>
-        </div>
-    </div>
-
-    <!-- Personal Statement Section -->
-    <div class="container personal-statement">
-        <h2>Personal Statement</h2>
-        <p>I’m Maryam from Lahore, Pakistan, known as "The City of Gardens." Having recently completed my exams for the third year of high school with a focus on Computer Science, Physics, and Mathematics, I stand at the threshold of exciting opportunities in the tech world. My fascination with technology began at an early age, fueled by the transformative power of user-friendly websites, apps, and AI tools. This passion has blossomed into a commitment to become a full-fledged full-stack web developer. I am particularly drawn to AI, with the ambition to develop tools that positively impact people's lives.</p>
-    </div>
-
-    <!-- Fullscreen Image Modal -->
-    <div class="modal" id="modal">
-        <img src="certs/3GradeMe.jpg" alt="3rd Grade Image">
-        <button class="close" onclick="closeModal()">×</button>
-    </div>
-
-    <button class="fullscreen-btn" onclick="openModal()">View Achievement in Fullscreen</button>
-
-    <!-- Google Translate API -->
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
-        function openModal() {
-            document.getElementById('modal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,ur,es,fr,de,ja,zh-CN',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-
-        function translateText(text) {
-            // Handle the translation of text
-            alert('Translation functionality will be applied here!');
-        }
-
+        // Updated GPA Conversion Function
         function convertGPA() {
-            // Placeholder GPA conversion functionality
-            let gpa = 3.75; // Example GPA, can be dynamically calculated
-            alert(`Your GPA in 4.0 scale: ${gpa}`);
+            let totalMarksObtained = 920; // Your obtained marks
+            let totalMarksAvailable = 1200; // The total possible marks
+            let gpa = (totalMarksObtained / totalMarksAvailable) * 4.0; // GPA Calculation
+
+            // Show GPA rounded to two decimal places
+            alert(`Your GPA on a 4.0 scale: ${gpa.toFixed(2)}`);
         }
     </script>
+
 </body>
 </html>
