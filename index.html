@@ -52,6 +52,7 @@
             color: #f1c40f;
         }
 
+        /* Hero Section */
         .hero {
             height: 80vh;
             display: flex;
@@ -262,7 +263,16 @@
         </nav>
     </header>
 
-    <section class="certifications">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects, certifications, and everything I am passionate about!</p>
+            <a href="#certifications" class="btn">View My Certifications</a>
+        </div>
+    </section>
+
+    <section class="certifications" id="certifications">
         <h2>Certifications</h2>
         <div class="certificates-gallery">
             <a href="#cert1"><img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
@@ -291,7 +301,7 @@
     </section>
 
     <section class="projects-preview">
-        <h2>Highlighted Projects</h2>
+        <h2>Projects</h2>
         <div class="projects-container">
             <div class="project-card">
                 <h3>Quiz Website</h3>
@@ -309,5 +319,15 @@
     <footer>
         <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Close modal function
+        const closeButtons = document.querySelectorAll('.close-btn');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
