@@ -130,8 +130,8 @@
 
         .certificates-gallery a {
             display: inline-block;
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -145,9 +145,10 @@
         }
 
         .certificates-gallery img:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
 
+        /* Modal Styling */
         .modal {
             position: fixed;
             top: 0;
@@ -159,16 +160,36 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            transition: opacity 0.3s ease;
         }
 
         .modal img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
         .modal:target {
             display: flex;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #d4ac0d;
         }
 
         .projects-container {
@@ -241,33 +262,31 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my journey as a passionate student striving for academic and personal excellence.</p>
-            <a href="about_me.html" class="btn">Learn More</a>
-        </div>
-    </section>
-
     <section class="certifications">
         <h2>Certifications</h2>
         <div class="certificates-gallery">
-            <a href="#cert1"><img src="certs/cs50.jpg" alt="Certificate 1"></a>
+            <a href="#cert1"><img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
             <a href="#cert2"><img src="certs/softskills.jpg" alt="SoftSkills Certificate"></a>
             <a href="#cert3"><img src="certs/volunteer.jpg" alt="Volunteer Certificate"></a>
             <a href="#cert4"><img src="certs/elementsofai.png" alt="AI Certificate"></a>
         </div>
+
+        <!-- Modal Popups -->
         <div id="cert1" class="modal">
             <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            <span class="close-btn">&times;</span>
         </div>
         <div id="cert2" class="modal">
             <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+            <span class="close-btn">&times;</span>
         </div>
         <div id="cert3" class="modal">
             <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
+            <span class="close-btn">&times;</span>
         </div>
         <div id="cert4" class="modal">
             <img src="certs/elementsofai.png" alt="AI Certificate">
+            <span class="close-btn">&times;</span>
         </div>
     </section>
 
@@ -275,20 +294,20 @@
         <h2>Highlighted Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>Rock Paper Scissors</h3>
-                <p>A fun game using interactive front-end techniques.</p>
-                <a href="https://maryam-innovates.github.io/Game/" class="btn">View Project</a>
+                <h3>Quiz Website</h3>
+                <p>A fun quiz website to test knowledge and learn new facts!</p>
+                <a href="quiz_website.html" class="btn">Explore</a>
             </div>
             <div class="project-card">
-                <h3>Quiz Website</h3>
-                <p>A dynamic quiz platform showcasing engaging design.</p>
-                <a href="https://maryam-innovates.github.io/Quiz/" class="btn">View Project</a>
+                <h3>Portfolio Website</h3>
+                <p>My personal portfolio showcasing projects and achievements.</p>
+                <a href="portfolio_website.html" class="btn">Explore</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Maryam Nawaz. All rights reserved.</p>
+        <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
     </footer>
 </body>
 </html>
