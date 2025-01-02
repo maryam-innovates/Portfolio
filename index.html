@@ -128,16 +128,40 @@
         }
 
         .certificates-gallery img {
-            width: 200px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             border-radius: 10px;
-            transition: transform 0.4s, box-shadow 0.4s;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            image-rendering: auto;
         }
 
         .certificates-gallery img:hover {
-            transform: scale(1.1) rotateX(10deg) rotateY(10deg);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            transform: scale(1.2);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .modal:target {
+            display: flex;
         }
 
         .projects-container {
@@ -221,10 +245,22 @@
     <section class="certifications">
         <h2>Certifications</h2>
         <div class="certificates-gallery">
-            <img src="certs/cs50.jpg" alt="CS50 Certificate">
-            <img src="certs/softskills.jpg" alt="Soft Skills Certificate">
-            <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
-            <img src="certs/elementsofai.png" alt="AI Certificate">
+            <a href="#cert1"><img src="cs50.jpg" alt="Certificate 1"></a>
+            <a href="#cert2"><img src="softskills.jpg" alt="SoftSkills Certificate"></a>
+            <a href="#cert3"><img src="volunteer.jpg" alt="Volunteer Certificate"></a>
+            <a href="#cert4"><img src="elementsofai.jpg" alt="AI Certificate"></a>
+        </div>
+        <div id="cert1" class="modal">
+            <img src="cs50.jpg" alt="CS50 Certificate">
+        </div>
+        <div id="cert2" class="modal">
+            <img src="softskills.jpg" alt="SoftSkills Certificate">
+        </div>
+        <div id="cert3" class="modal">
+            <img src="volunteer.jpg" alt="Volunteer Certificate">
+        </div>
+        <div id="cert4" class="modal">
+            <img src="elementsofai.jpg" alt="AI Certificate">
         </div>
     </section>
 
@@ -234,12 +270,12 @@
             <div class="project-card">
                 <h3>Rock Paper Scissors</h3>
                 <p>A fun game using interactive front-end techniques.</p>
-                <a href="https://maryam-innovates.github.io/Rock-Paper-Scissor-1/" class="btn">View Project</a>
+                <a href="https://maryam-innovates.github.io/Game/" class="btn">View Project</a>
             </div>
             <div class="project-card">
                 <h3>Quiz Website</h3>
                 <p>A dynamic quiz platform showcasing engaging design.</p>
-                <a href="#" class="btn">Coming Soon</a>
+                <a href="https://maryam-innovates.github.io/Quiz/" class="btn">View Project</a>
             </div>
         </div>
     </section>
