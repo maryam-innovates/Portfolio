@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz - Study Plan</title>
+    <title>Maryam Nawaz - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -110,25 +110,96 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Study Plan Content Section */
-        .study-plan-section {
+        .certifications, .projects-preview {
             padding: 50px 10%;
             text-align: center;
         }
 
-        .study-plan-section h2 {
+        .certifications h2, .projects-preview h2 {
             font-size: 2rem;
             color: #3498db;
             margin-bottom: 20px;
         }
 
-        .study-plan-section p {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            line-height: 1.5;
+        .certificates-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
-        .study-plan-card {
+        .certificates-gallery a {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificates-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .certificates-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Modal Styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #d4ac0d;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
             background: white;
             border-radius: 10px;
             padding: 20px;
@@ -138,19 +209,24 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .study-plan-card:hover {
+        .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .study-plan-card h3 {
+        .project-card h3 {
             font-size: 1.5rem;
             color: #8e44ad;
         }
 
-        .study-plan-card p {
+        .project-card p {
             font-size: 1rem;
             margin: 10px 0;
+        }
+
+        .project-card .btn {
+            font-size: 0.9rem;
+            padding: 8px 15px;
         }
 
         footer {
@@ -178,8 +254,8 @@
         <h1>Maryam Nawaz</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="study_plan.html" class="active">Study Plan</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="study_plan.html">Study Plan</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="about_me.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -190,29 +266,53 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>My Study Plan</h2>
-            <p>Explore my study schedule, goals, and courses I am focusing on for personal growth and future success.</p>
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects, certifications, and everything I am passionate about!</p>
+            <a href="#certifications" class="btn">View My Certifications</a>
         </div>
     </section>
 
-    <!-- Study Plan Content Section -->
-    <section class="study-plan-section">
-        <h2>Study Goals and Schedule</h2>
-        <p>This section outlines my planned academic journey and the steps I'm taking to expand my knowledge in various fields like tech and business.</p>
-        
-        <div class="study-plan-card">
-            <h3>CS50: Introduction to Computer Science</h3>
-            <p>Course focus: Computer Science fundamentals, algorithms, data structures, and programming.</p>
+    <section class="certifications" id="certifications">
+        <h2>Certifications</h2>
+        <div class="certificates-gallery">
+            <a href="#cert1"><img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
+            <a href="#cert2"><img src="certs/softskills.jpg" alt="SoftSkills Certificate"></a>
+            <a href="#cert3"><img src="certs/volunteer.jpg" alt="Volunteer Certificate"></a>
+            <a href="#cert4"><img src="certs/elementsofai.png" alt="AI Certificate"></a>
         </div>
-        
-        <div class="study-plan-card">
-            <h3>Google IT Support Professional Certificate</h3>
-            <p>Course focus: IT support fundamentals, troubleshooting, networking, and security basics.</p>
+
+        <!-- Modal Popups -->
+        <div id="cert1" class="modal">
+            <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            <span class="close-btn">&times;</span>
         </div>
-        
-        <div class="study-plan-card">
-            <h3>Digital Marketing & E-Commerce</h3>
-            <p>Course focus: Digital marketing strategies, e-commerce platforms, and customer engagement.</p>
+        <div id="cert2" class="modal">
+            <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+            <span class="close-btn">&times;</span>
+        </div>
+        <div id="cert3" class="modal">
+            <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
+            <span class="close-btn">&times;</span>
+        </div>
+        <div id="cert4" class="modal">
+            <img src="certs/elementsofai.png" alt="AI Certificate">
+            <span class="close-btn">&times;</span>
+        </div>
+    </section>
+
+    <section class="projects-preview">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Quiz Website</h3>
+                <p>A fun quiz website to test knowledge and learn new facts!</p>
+                <a href="quiz_website.html" class="btn">Explore</a>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>My personal portfolio showcasing projects and achievements.</p>
+                <a href="portfolio_website.html" class="btn">Explore</a>
+            </div>
         </div>
     </section>
 
@@ -220,5 +320,14 @@
         <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
     </footer>
 
+    <script>
+        // Close modal function
+        const closeButtons = document.querySelectorAll('.close-btn');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
