@@ -3,110 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Card GPA Conversion</title>
+    <title>Maryam Nawaz's Portfolio</title>
     <style>
-        /* CSS for Layout, Color Scheme, and Responsiveness */
+        /* Overall Layout & Design */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
             margin: 0;
             padding: 0;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #007bff;
-        }
-
-        .study-plan {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            margin: 20px;
-            max-width: 800px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .study-plan h2 {
-            color: #007bff;
-        }
-
-        .study-plan p {
-            font-size: 1rem;
-            line-height: 1.6;
             color: #333;
         }
 
-        img {
-            max-width: 100%;
-            border-radius: 8px;
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .profile-image {
+            width: 150px;
+            border-radius: 50%;
             margin-top: 20px;
         }
 
-        button {
+        .content-section {
+            background-color: white;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .gpa-section, .study-plan-section {
+            background-color: #fafbfc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .gpa-section button {
             background-color: #007bff;
             color: white;
             border: none;
             padding: 10px 20px;
+            font-size: 1rem;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
-        button:hover {
+        .gpa-section button:hover {
             background-color: #0056b3;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .content-section {
                 padding: 15px;
             }
 
-            .study-plan {
-                padding: 15px;
+            .profile-image {
+                width: 120px;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Main Container -->
     <div class="container">
-        <h1>Result Card GPA Conversion</h1>
-        
-        <!-- Image Section for the Result Card -->
-        <img src="images/result-card.png" alt="Result Card">
+
+        <!-- Header Section with Your Name -->
+        <header>
+            <h1>Maryam Nawaz's Professional Portfolio</h1>
+            <img src="images/profile.jpg" alt="Maryam Nawaz" class="profile-image">
+        </header>
 
         <!-- Study Plan Section -->
-        <section class="study-plan">
-            <h2>My Study Plan</h2>
+        <section class="study-plan-section content-section">
+            <h2>My Study Plan & Personal Statement</h2>
             <p>
-                This is my personal statement and study plan. I aim to focus on maximizing my potential in the coming years by actively engaging in various extracurricular activities, academic projects, and community service. 
-                I am determined to pursue a dual degree in business and data science, as I am passionate about learning and growing in these fields.
+                As a student passionate about technology, leadership, and making a meaningful impact, I am focusing on maximizing my potential in the coming years. I am working towards building a future where I can combine business knowledge with data science, AI, and software engineering. My academic journey is not only about grades but also about pursuing projects, volunteering, and gaining experiences that help me grow both personally and professionally.
             </p>
             <p>
-                I am committed to continuously developing my skills, exploring new interests, and making a positive impact in the world around me.
+                In the next few years, I am dedicated to exploring my passion for technology, building real-world skills, and contributing positively to my community through active involvement in leadership programs and extracurriculars. My goal is to use the knowledge and skills I gain to contribute meaningfully to the field of technology and beyond.
             </p>
         </section>
 
-        <!-- GPA Conversion Button -->
-        <button onclick="convertGPA()">Convert GPA</button>
+        <!-- GPA Conversion Section -->
+        <section class="gpa-section content-section">
+            <h2>Calculate Your GPA</h2>
+            <p>Use the button below to calculate your GPA on a 4.0 scale based on your obtained and total marks.</p>
+            <button onclick="convertGPA()">Convert GPA</button>
+        </section>
+
+        <!-- Result Card Image Section -->
+        <section class="content-section">
+            <h2>My Result Card</h2>
+            <img src="images/result-card.png" alt="Result Card">
+            <p>Here is a preview of my result card showing my academic performance.</p>
+        </section>
+
     </div>
 
     <script>
-        // Updated GPA Conversion Function
+        // GPA Conversion Function
         function convertGPA() {
-            let totalMarksObtained = 920; // Your obtained marks
-            let totalMarksAvailable = 1200; // The total possible marks
+            let totalMarksObtained = 920; // Example of marks obtained
+            let totalMarksAvailable = 1200; // Total possible marks
             let gpa = (totalMarksObtained / totalMarksAvailable) * 4.0; // GPA Calculation
 
-            // Show GPA rounded to two decimal places
+            // Show GPA in an alert, rounded to 2 decimal places
             alert(`Your GPA on a 4.0 scale: ${gpa.toFixed(2)}`);
         }
     </script>
