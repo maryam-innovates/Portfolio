@@ -1,175 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Plan - My Achievements</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Plan - Maryam Nawaz</title>
+    <style>
+        /* Reset and base styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            height: 100%;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #ff6347;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(45deg, #ff7f50, #ff6347);
-      color: #fff;
-    }
+        /* Section Styles */
+        .container {
+            padding: 40px 20px;
+        }
 
-    .container {
-      width: 80%;
-      margin: auto;
-      padding: 20px;
-    }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        .intro h2 {
+            font-size: 2.5rem;
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
+        .intro p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
 
-    p {
-      font-size: 1.2rem;
-    }
+        /* Educational History Section */
+        .education {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
 
-    section {
-      margin-bottom: 40px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: rgba(255, 255, 255, 0.1);
-    }
+        .education-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
 
-    button {
-      padding: 10px 20px;
-      background-color: #ff6347;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin: 10px;
-      transition: all 0.3s ease;
-    }
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
 
-    button:hover {
-      background-color: #ff4500;
-      transform: scale(1.05);
-    }
+        .education-card img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+        .education-card img:hover {
+            transform: scale(1.05);
+        }
 
-    #transcriptImage {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
+        .education-card h3 {
+            color: #ff6347;
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
 
-    #transcriptImage:hover {
-      transform: scale(1.05);
-    }
+        .education-card p {
+            font-size: 1.1rem;
+            color: #777;
+        }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1rem;
-    }
-  </style>
+        /* Personal Statement Section */
+        .personal-statement {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .personal-statement h2 {
+            color: #ff6347;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .personal-statement p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Fullscreen Image Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .fullscreen-btn, .action-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .fullscreen-btn:hover, .action-btn:hover {
+            background-color: #e74c3c;
+        }
+
+        .action-btn {
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>My Study Plan</h1>
-      <p>Below is my journey, including achievements, education, and personal statement.</p>
-    </header>
 
-    <section class="intro">
-      <h2>Introduction</h2>
-      <p>I’m Maryam from Lahore, Pakistan, aiming to pursue a career in full-stack web development and AI.</p>
-    </section>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Maryam Nawaz</h1>
+        <p>Tech Enthusiast | Full-Stack Developer in the Making | Aspiring AI Innovator</p>
+    </div>
 
-    <section class="transcript">
-      <h2>Academic Achievements</h2>
-      <button id="translateBtn">Translate Transcript</button>
-      <button id="convertGradesBtn">Convert Grades to GPA</button>
-      
-      <div id="transcriptContent">
-        <p>Name: Maryam Nawaz</p>
-        <p>Grade: A</p>
-        <p>School: Govt Tahir Model Girls High School, Lahore</p>
-        <img src="certs/result_card.jpg" alt="Transcript" id="transcriptImage">
-      </div>
-    </section>
+    <!-- Introduction Section -->
+    <div class="container intro">
+        <h2>Brief Introduction</h2>
+        <p>I’m Maryam, a passionate tech enthusiast from Lahore, Pakistan. Currently, I am focusing on Computer Science, Physics, and Mathematics, with a deep interest in becoming a full-stack web developer, particularly specializing in AI development. My journey includes a variety of exciting achievements and personal projects in the tech field, which I believe will allow me to contribute significantly to the industry.</p>
+    </div>
 
-    <section class="personal-statement">
-      <h2>Personal Statement</h2>
-      <p>I’m passionate about tech, especially AI and web development...</p>
-    </section>
+    <!-- Educational History Section -->
+    <div class="container education">
+        <div class="education-card">
+            <img src="certs/3GradeMe.jpg" alt="3rd Grade Achievement" onclick="openModal()">
+            <h3>3rd Grade Achievement</h3>
+            <p>Received recognition for outstanding academic performance and was actively involved in extracurricular activities.</p>
+            <button class="action-btn" onclick="translateText('3rd Grade Achievement')">Translate</button>
+            <button class="action-btn" onclick="convertGPA()">GPA Conversion</button>
+        </div>
 
-    <footer>
-      <p>© 2025 Maryam Nawaz</p>
-    </footer>
-  </div>
+        <div class="education-card">
+            <img src="certs/character-certificate.jpg" alt="Character Certificate">
+            <h3>Character Certificate</h3>
+            <p>Awarded for exceptional character and contributions to school life.</p>
+        </div>
 
-  <script>
-    // Grade conversion and translation logic
+        <div class="education-card">
+            <img src="certs/result_card.jpg" alt="Grade 9-10 Transcript">
+            <h3>Grade 9-10 Achievements</h3>
+            <p>Academic excellence in the subjects of Computer Science, Physics, and Mathematics.</p>
+        </div>
+    </div>
 
-    document.getElementById('translateBtn').addEventListener('click', function() {
-      const transcriptContent = document.getElementById('transcriptContent');
-      const textToTranslate = transcriptContent.innerText;
-      
-      // Translation API - Replace with an actual translation API like Google Translate
-      const translatedText = translateText(textToTranslate, 'es'); // Example to Spanish
-      
-      transcriptContent.innerHTML = `<p>${translatedText}</p>`;
-    });
+    <!-- Personal Statement Section -->
+    <div class="container personal-statement">
+        <h2>Personal Statement</h2>
+        <p>I’m Maryam from Lahore, Pakistan, known as "The City of Gardens." Having recently completed my exams for the third year of high school with a focus on Computer Science, Physics, and Mathematics, I stand at the threshold of exciting opportunities in the tech world. My fascination with technology began at an early age, fueled by the transformative power of user-friendly websites, apps, and AI tools. This passion has blossomed into a commitment to become a full-fledged full-stack web developer. I am particularly drawn to AI, with the ambition to develop tools that positively impact people's lives.</p>
+    </div>
 
-    document.getElementById('convertGradesBtn').addEventListener('click', function() {
-      const grades = {
-        'A': 90,
-        'B': 80,
-        'C': 70,
-        'D': 60,
-        'F': 50
-      };
+    <!-- Fullscreen Image Modal -->
+    <div class="modal" id="modal">
+        <img src="certs/3GradeMe.jpg" alt="3rd Grade Image">
+        <button class="close" onclick="closeModal()">×</button>
+    </div>
 
-      // Assuming we convert a simple 'Grade: A' into GPA
-      let transcript = document.getElementById('transcriptContent').innerHTML;
-      transcript = transcript.replace(/Grade: ([A-F])/g, function(match, grade) {
-        const gpa = convertGradeToGPA(grades[grade]);
-        return `GPA: ${gpa}`;
-      });
+    <button class="fullscreen-btn" onclick="openModal()">View Achievement in Fullscreen</button>
 
-      document.getElementById('transcriptContent').innerHTML = transcript;
-    });
+    <!-- Google Translate API -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
 
-    function convertGradeToGPA(percentage) {
-      if (percentage >= 90) return 4.0;
-      if (percentage >= 80) return 3.7;
-      if (percentage >= 70) return 3.0;
-      if (percentage >= 60) return 2.7;
-      if (percentage >= 50) return 2.0;
-      return 1.0;
-    }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-    // Example translation function (fake function for demo)
-    function translateText(text, language) {
-      // This would be a call to a translation API in a real-world scenario
-      return "Texto traducido: " + text; // Fake translation
-    }
-  </script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ur,es,fr,de,ja,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        function translateText(text) {
+            // Handle the translation of text
+            alert('Translation functionality will be applied here!');
+        }
+
+        function convertGPA() {
+            // Placeholder GPA conversion functionality
+            let gpa = 3.75; // Example GPA, can be dynamically calculated
+            alert(`Your GPA in 4.0 scale: ${gpa}`);
+        }
+    </script>
 </body>
 </html>
