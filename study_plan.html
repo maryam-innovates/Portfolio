@@ -3,38 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracurriculars - Maryam Nawaz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Study Plan - Maryam Nawaz</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8; /* Consistent with home page background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        h1, h2 {
+            font-family: 'Lora', serif;
+            color: #2c3e50; /* Consistent with the home page */
+            font-weight: 700;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* 3D Card Style for Interactive Experience */
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: rotateY(15deg);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff6347; /* Accent color */
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Educational Section */
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .education-table th, .education-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .education-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* Full Screen Image */
+        .full-screen-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-screen-image img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #d9534f;
+        }
+
+        /* Personal Statement */
+        .personal-statement {
+            margin-top: 60px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .personal-statement h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .personal-statement p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
+
+            .personal-statement h2 {
+                font-size: 1.5rem;
+            }
+
+            .education-table {
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <a href="index.html" class="logo">Maryam Nawaz</a>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="extracurriculars.html">Extracurriculars</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Brief Introduction -->
+    <div class="container">
+        <h1>Study Plan</h1>
+        <p class="intro-text">Hi, I'm Maryam, and this is my study plan. I've always been passionate about coding, technology, and AI. Here's an overview of my educational journey so far and the path I plan to take in the future.</p>
+
+        <!-- Educational Achievements -->
+        <div class="card">
+            <h2>Educational Achievements & Certificates</h2>
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th>Achievement</th>
+                        <th>Details</th>
+                        <th>Certificate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Position in 8th Grade</td>
+                        <td>Achieved top rank in my class.</td>
+                        <td><img src="certs/result_card.jpg" alt="Result Card" onclick="showFullScreenImage('certs/result_card.jpg')" /></td>
+                    </tr>
+                    <tr>
+                        <td>3rd Grade Participation</td>
+                        <td>Featured for active participation in extracurriculars.</td>
+                        <td><img src="certs/3GradeMe.jpg" alt="3rd Grade Participation" onclick="showFullScreenImage('certs/3GradeMe.jpg')" /></td>
+                    </tr>
+                    <tr>
+                        <td>Character Certificate</td>
+                        <td>Recognized for exemplary behavior and conduct.</td>
+                        <td><img src="certs/character-certificate.jpg" alt="Character Certificate" onclick="showFullScreenImage('certs/character-certificate.jpg')" /></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </header>
 
-    <section class="extracurriculars">
-        <h1>Extracurricular Activities</h1>
-        <h2>Volunteering at Psych.4Teens</h2>
-        <p>Created content and raised awareness about mental health, assisting in spreading valuable insights to teens.</p>
+        <!-- Personal Statement -->
+        <div class="personal-statement">
+            <h2>Personal Statement</h2>
+            <p>I’m Maryam from Lahore, Pakistan, known as "The City of Gardens." Having recently completed my exams for the third year of high school with a focus on Computer Science, Physics, and Mathematics, I stand at the threshold of exciting opportunities in the tech world.</p>
+            <p>My fascination with technology began at an early age, fueled by the transformative power of user-friendly websites, apps, and AI tools. This passion has blossomed into a commitment to become a full-fledged full-stack web developer. I am particularly drawn to AI, with the ambition to develop tools that positively impact people's lives.</p>
+            <p>In my first year of high school, I engaged in Girl Guiding for five months, where I honed my teamwork, leadership, and management skills. This experience, along with my participation in various extracurricular activities, has greatly contributed to my personal growth and confidence.</p>
+            <p>My coding skills flourished through the CS50: Introduction to Computer Science course offered by Harvard Online, where I completed nine problem sets and a final project. This course deepened my understanding of programming languages, web development techniques, and the crucial art of problem-solving. Learning about databases, algorithms, conditions, functions, and loops reshaped my perspective on coding, sparking an eagerness to refine my skills further.</p>
+            <p>Alongside CS50, I completed courses in Web Development by SoloLearn and Effective Business Websites by HP LIFE. I applied my skills by developing a Rock-Paper-Scissors game and creating my portfolio website. Through both individual projects and group collaborations, I enhanced my teamwork capabilities, showcasing my work on my LinkedIn profile.</p>
+            <p>I also volunteered with Psych.4Teens, focusing on content creation to raise public awareness about mental health. This experience underscored my belief in using technology to address societal challenges.</p>
+            <p>Driven by my passion for coding, I established a social club for like-minded beginners and intermediates, emphasizing project collaborations and networking in front-end and back-end development. Balancing the management of this club with my studies and volunteering was challenging, but it significantly improved my organizational skills as I assumed roles such as vice president and manager.</p>
+            <p>As I look to the future, I am eager to continue my education in Coding and AI at [University Name]. This institution stands out to me for its commitment to innovation and its strong community of aspiring tech leaders. I am particularly impressed by its curriculum and resources, which I believe will provide the ideal environment for my growth and development.</p>
+            <p>In the coming years, I aim to focus on my areas of interest, including software engineering, AI, and full-stack development. Through ongoing projects and internships, I hope to further refine my coding and problem-solving skills, working on real-world applications that can make a difference.</p>
+        </div>
+    </div>
 
-        <h2>Leadership in Girl Guiding</h2>
-        <p>Engaged in leadership training, guiding younger students and participating in community service projects.</p>
-    </section>
+    <!-- Full Screen Image Modal -->
+    <div class="full-screen-image" id="imageModal">
+        <button class="close-btn" onclick="closeModal()">Close</button>
+        <img src="" alt="Full-Screen Image" id="modalImage">
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Maryam Nawaz. All rights reserved.</p>
-    </footer>
+    <script>
+        function showFullScreenImage(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImage.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
