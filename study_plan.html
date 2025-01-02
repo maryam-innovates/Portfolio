@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz's Portfolio</title>
+    <title>Study Plan - Maryam Nawaz</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
+    <script src="https://apis.google.com/js/api.js"></script>
     <style>
-        /* General Layout */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fa;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
         header {
-            background-color: #007bff;
+            background: #0044cc;
             color: white;
+            width: 100%;
+            padding: 20px;
             text-align: center;
-            padding: 30px 0;
-            border-radius: 10px;
         }
 
         header h1 {
@@ -33,155 +33,167 @@
             font-size: 36px;
         }
 
-        /* Profile Section */
-        .profile-section {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .profile-image {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-
-        .profile-section h2 {
-            font-size: 24px;
-            color: #007bff;
-        }
-
-        .profile-section p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Content Section */
-        .content-section {
-            background-color: white;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .content-section h2 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-
-        /* GPA Section */
-        .gpa-section button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .gpa-section button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Result Card Section */
-        .result-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #007bff;
-            color: white;
-            margin-top: 50px;
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
             border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
+        .section {
+            margin-bottom: 40px;
+        }
 
-            .profile-section h2 {
-                font-size: 20px;
-            }
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #333;
+        }
 
-            .content-section {
-                padding: 15px;
-            }
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
 
-            .profile-image {
-                width: 120px;
-            }
+        .certificates img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .certificates img:hover {
+            transform: scale(1.05);
+        }
+
+        .full-screen-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-screen-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .full-screen-modal .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff0000;
+            color: white;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .certificate-description {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background: #0044cc;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>Maryam Nawaz - Study Plan</h1>
+    </header>
 
-    <!-- Main Container -->
     <div class="container">
-
-        <!-- Header Section -->
-        <header>
-            <h1>Maryam Nawaz - Portfolio</h1>
-        </header>
-
-        <!-- Profile Section -->
-        <section class="profile-section">
-            <img src="images/profile.jpg" alt="Maryam Nawaz" class="profile-image">
-            <h2>About Me</h2>
-            <p>
-                I'm Maryam Nawaz, a student passionate about technology, leadership, and personal growth. I am focused on excelling in areas like AI, data science, and software engineering, with an aspiration to make meaningful contributions to my community and the world.
-            </p>
+        <section class="section">
+            <h2>My Study Plan</h2>
+            <p>This page outlines my study plan, reflecting my academic journey, current activities, and goals for the future. I am currently in Grade 11, and I will update this plan with new activities as I progress.</p>
         </section>
 
-        <!-- Study Plan Section -->
-        <section class="content-section">
-            <h2>My Study Plan & Personal Statement</h2>
-            <p>
-                I am committed to developing both my technical skills and leadership abilities. I plan to pursue a dual degree in business and technology, with a specific focus on data science and AI. My study plan also includes engaging in extracurriculars that help build my character and resilience.
-            </p>
+        <section class="section">
+            <h2>Education Background</h2>
+            <p>Here are some highlights from my education so far:</p>
+            <ul>
+                <li><strong>Grade 1-5:</strong> Presentation Grammar School, Lahore.</li>
+                <li><strong>Grade 8-10:</strong> Govt. Tahir Model Girls High School, Lahore (Matriculation, Science Major)</li>
+                <li><strong>Currently:</strong> Govt. Postgraduate College for Women, Lahore (Grade 11 - Science Major with Computer, Physics, and Math).</li>
+            </ul>
         </section>
 
-        <!-- GPA Calculator Section -->
-        <section class="gpa-section content-section">
-            <h2>Calculate Your GPA</h2>
-            <p>Click the button below to calculate your GPA on a 4.0 scale based on your obtained and total marks.</p>
-            <button onclick="convertGPA()">Calculate GPA</button>
+        <section class="section">
+            <h2>Current Activities</h2>
+            <p>I am currently enrolled in the following courses and activities:</p>
+            <ul>
+                <li><strong>CS50 - Harvard Online Course</strong>: Completing by December 2024.</li>
+                <li><strong>HP Life Course:</strong> Effective Business Web (Completed)</li>
+                <li><strong>Google Soft Skills Course:</strong> Currently enrolled.</li>
+                <li><strong>Web Development (SoloLearn):</strong> Currently self-paced.</li>
+            </ul>
         </section>
 
-        <!-- Result Card Section -->
-        <section class="result-card content-section">
-            <h2>My Result Card</h2>
-            <img src="images/result-card.png" alt="Result Card">
-            <p>Here's a preview of my academic result card. You can see my performance across various subjects.</p>
+        <section class="section certificates">
+            <h2>Certificates Before 2024</h2>
+            <div class="certificate-item">
+                <img src="certs/character-certificate.jpg" alt="Character Certificate" onclick="openModal('certs/character-certificate.jpg')">
+                <div class="certificate-description">Character Certificate - Awarded for outstanding conduct in school.</div>
+            </div>
+            <div class="certificate-item">
+                <img src="certs/result-card.jpg" alt="Result Card" onclick="openModal('certs/result-card.jpg')">
+                <div class="certificate-description">Result Card for Matriculation Exams (Grade 10).</div>
+            </div>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Maryam Nawaz. All Rights Reserved.</p>
-        </footer>
-
+        <section class="section">
+            <h2>Future Goals</h2>
+            <p>My future academic goals include pursuing a dual degree in <strong>Business and Data Science</strong> or <strong>Software Engineering</strong>. I aim to apply to top universities, including Ivy League schools such as Harvard and MIT.</p>
+        </section>
     </div>
 
-    <script>
-        // GPA Conversion Function
-        function convertGPA() {
-            let totalMarksObtained = 920; // Example of marks obtained
-            let totalMarksAvailable = 1200; // Total possible marks
-            let gpa = (totalMarksObtained / totalMarksAvailable) * 4.0; // GPA Calculation
+    <div id="modal" class="full-screen-modal">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <img id="modal-img" src="" alt="Certificate">
+    </div>
 
-            // Show GPA in an alert, rounded to 2 decimal places
-            alert(`Your GPA on a 4.0 scale: ${gpa.toFixed(2)}`);
+    <footer>
+        <p>Maryam Nawaz - Govt Postgraduate College for Women, Lahore (Session 2024-2026) | <a href="https://ggcwbbp.edu.pk/" target="_blank" style="color:white;">College Website</a></p>
+    </footer>
+
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
         }
     </script>
-
 </body>
+
 </html>
