@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maryam Nawaz Portfolio</title>
     <style>
+        /* General Reset */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #d9e8f5);
+            color: #333;
         }
 
         header {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #007bff, #6a5acd);
             color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
+            font-size: 3rem;
             margin: 0;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         nav {
             margin: 20px 0;
             text-align: center;
+            background: rgba(0, 123, 255, 0.1);
+            padding: 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -33,20 +49,33 @@
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #6a5acd;
+            transform: translateY(-3px);
         }
 
         section {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         #about {
-            background-color: #f9f9f9;
+            background: linear-gradient(to bottom, #f9f9f9, #eef3f8);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
         }
 
         #certificates {
-            padding: 20px;
-            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(120deg, #eef3f8, #d9e8f5);
+            border-radius: 15px;
         }
 
         .certificates-grid {
@@ -58,18 +87,37 @@
 
         .certificates-grid img {
             width: 100%;
-            max-width: 250px;
+            max-width: 300px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .certificates-grid img:hover {
+            transform: scale(1.1) rotateY(10deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        #projects {
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #d9e8f5, #eef3f8);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #6a5acd, #007bff);
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: relative;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -116,6 +164,3 @@
 </body>
 
 </html>
-
-
-
