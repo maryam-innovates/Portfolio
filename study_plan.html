@@ -1,199 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Plan - Maryam Nawaz</title>
-    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
-    <script src="https://apis.google.com/js/api.js"></script>
+    <title>Maryam Nawaz - Study Plan</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
-            color: #333;
+        /* Reset some basic styling */
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            box-sizing: border-box;
         }
 
-        header {
-            background: #0044cc;
-            color: white;
-            width: 100%;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
             padding: 20px;
+        }
+
+        /* Header */
+        header {
             text-align: center;
+            padding: 20px;
+            background: #2C3E50;
+            color: #ecf0f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 36px;
+            font-size: 2.5rem;
+            font-weight: 600;
         }
 
-        .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
+        /* Section for essay */
+        .essay-section {
+            margin-bottom: 30px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 28px;
+        .essay-section h2 {
+            color: #2C3E50;
+            font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #333;
         }
 
-        .section p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .certificates img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .essay-section p {
+            font-size: 1.1rem;
             margin-bottom: 15px;
+        }
+
+        /* Image Section */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
-        .certificates img:hover {
-            transform: scale(1.05);
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .full-screen-modal {
+        /* Section for translations */
+        .translate-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .translate-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Floating Back Button for Full-screen */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Modal for Full-Screen Image */
+        .modal {
             display: none;
             position: fixed;
-            top: 0;
+            z-index: 1;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
             justify-content: center;
             align-items: center;
         }
 
-        .full-screen-modal img {
+        .modal img {
             max-width: 90%;
-            max-height: 90%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-height: 80%;
+            margin: auto;
+            display: block;
         }
 
-        .full-screen-modal .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #ff0000;
-            color: white;
-            font-size: 24px;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
+        .modal.active {
+            display: flex;
         }
 
-        .certificate-description {
-            font-size: 16px;
-            color: #555;
-            margin-top: 10px;
+        .modal-content {
             text-align: center;
         }
 
+        /* Footer */
         footer {
-            background: #0044cc;
-            color: white;
-            padding: 10px;
-            width: 100%;
             text-align: center;
-            position: fixed;
-            bottom: 0;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
         }
     </style>
 </head>
-
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Maryam Nawaz - Study Plan</h1>
+        <h1>Maryam Nawaz - My Study Plan</h1>
     </header>
 
-    <div class="container">
-        <section class="section">
-            <h2>My Study Plan</h2>
-            <p>This page outlines my study plan, reflecting my academic journey, current activities, and goals for the future. I am currently in Grade 11, and I will update this plan with new activities as I progress.</p>
-        </section>
-
-        <section class="section">
-            <h2>Education Background</h2>
-            <p>Here are some highlights from my education so far:</p>
-            <ul>
-                <li><strong>Grade 1-5:</strong> Presentation Grammar School, Lahore.</li>
-                <li><strong>Grade 8-10:</strong> Govt. Tahir Model Girls High School, Lahore (Matriculation, Science Major)</li>
-                <li><strong>Currently:</strong> Govt. Postgraduate College for Women, Lahore (Grade 11 - Science Major with Computer, Physics, and Math).</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Current Activities</h2>
-            <p>I am currently enrolled in the following courses and activities:</p>
-            <ul>
-                <li><strong>CS50 - Harvard Online Course</strong>: Completing by December 2024.</li>
-                <li><strong>HP Life Course:</strong> Effective Business Web (Completed)</li>
-                <li><strong>Google Soft Skills Course:</strong> Currently enrolled.</li>
-                <li><strong>Web Development (SoloLearn):</strong> Currently self-paced.</li>
-            </ul>
-        </section>
-
-        <section class="section certificates">
-            <h2>Certificates Before 2024</h2>
-            <div class="certificate-item">
-                <img src="certs/character-certificate.jpg" alt="Character Certificate" onclick="openModal('certs/character-certificate.jpg')">
-                <div class="certificate-description">Character Certificate - Awarded for outstanding conduct in school.</div>
-            </div>
-            <div class="certificate-item">
-                <img src="certs/result-card.jpg" alt="Result Card" onclick="openModal('certs/result-card.jpg')">
-                <div class="certificate-description">Result Card for Matriculation Exams (Grade 10).</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Future Goals</h2>
-            <p>My future academic goals include pursuing a dual degree in <strong>Business and Data Science</strong> or <strong>Software Engineering</strong>. I aim to apply to top universities, including Ivy League schools such as Harvard and MIT.</p>
-        </section>
+    <!-- Essay Section -->
+    <div class="essay-section">
+        <h2>My Educational Journey</h2>
+        <p>I’m Maryam from Pakistan, born and raised in Lahore, known as "The City of Gardens." I recently completed my exams for the third year of high school, where I studied a combination of Computer Science, Physics, and Math.</p>
+        <p>In addition to my studies, I participated in various beneficial extracurriculars that helped me grow and become more confident...</p>
+        <!-- Full essay content here -->
     </div>
 
-    <div id="modal" class="full-screen-modal">
-        <button class="close-btn" onclick="closeModal()">×</button>
-        <img id="modal-img" src="" alt="Certificate">
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <img src="certs/2024.jpg" alt="2024 - College Start" onclick="openModal(this.src)">
+        <img src="certs/3GradeMe.jpg" alt="Grade 3 Performance" onclick="openModal(this.src)">
+        <img src="certs/8GradeProject.png" alt="Grade 8 Project" onclick="openModal(this.src)">
+        <img src="certs/students.jpg" alt="College Assembly" onclick="openModal(this.src)">
+        <img src="certs/firstday.jpg" alt="First Day in College" onclick="openModal(this.src)">
+        <img src="certs/face.png" alt="Logo" onclick="openModal(this.src)">
+        <img src="certs/SnapMe.jpg" alt="11th Grade" onclick="openModal(this.src)">
     </div>
 
+    <!-- Translate Button for Certificates -->
+    <div>
+        <a href="https://translate.google.com" target="_blank" class="translate-btn">Translate Certificates</a>
+    </div>
+
+    <!-- Modal for Full-Screen Image -->
+    <div class="modal" id="modal">
+        <span class="back-button" onclick="closeModal()">×</span>
+        <img id="modalImage" src="" alt="Full Screen Image">
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>Maryam Nawaz - Govt Postgraduate College for Women, Lahore (Session 2024-2026) | <a href="https://ggcwbbp.edu.pk/" target="_blank" style="color:white;">College Website</a></p>
+        <p>&copy; 2025 Maryam Nawaz | All Rights Reserved</p>
     </footer>
 
     <script>
-        function openModal(imageSrc) {
-            var modal = document.getElementById("modal");
-            var modalImg = document.getElementById("modal-img");
-            modal.style.display = "flex";
-            modalImg.src = imageSrc;
+        // Modal functionality for full-screen images
+        function openModal(src) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = src;
+            modal.classList.add("active");
         }
 
         function closeModal() {
-            var modal = document.getElementById("modal");
-            modal.style.display = "none";
+            const modal = document.getElementById("modal");
+            modal.classList.remove("active");
         }
     </script>
-</body>
 
+</body>
 </html>
