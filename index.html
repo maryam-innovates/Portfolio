@@ -128,15 +128,16 @@
         }
 
         .certificates-gallery img {
-            width: 120px;
-            height: 120px;
+            width: 200px;
+            height: 140px;
             border-radius: 10px;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         .certificates-gallery img:hover {
-            transform: scale(1.2);
+            transform: scale(1.1) rotateX(10deg) rotateY(10deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
         }
 
         .projects-container {
@@ -220,10 +221,10 @@
     <section class="certifications">
         <h2>Certifications</h2>
         <div class="certificates-gallery">
-            <img src="cert1.jpg" alt="Certificate 1">
-            <img src="cert2.jpg" alt="Certificate 2">
-            <img src="cert3.jpg" alt="Certificate 3">
-            <img src="cert4.jpg" alt="Certificate 4">
+            <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            <img src="certs/softskills.jpg" alt="Soft Skills Certificate">
+            <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
+            <img src="certs/elementsofai.png" alt="AI Certificate">
         </div>
     </section>
 
