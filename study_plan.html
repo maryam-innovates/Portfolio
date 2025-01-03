@@ -20,6 +20,7 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     color: white;
   }
   
   #overlay {
@@ -120,7 +121,10 @@
             background-color: yellow;
             transition: background-color 0.3s ease;
         }
-  
+      a {
+        text-decoration:none;
+      }
+        
       </style>
   </head>
   <body>
@@ -272,6 +276,41 @@
                   overlayImg.src = '';
               }
           });
+
+
+        <script>
+    const images = document.querySelectorAll('.gallery img');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const close = document.getElementById('close');
+
+    // Event listener for clicking on gallery images
+    images.forEach((img) => {
+        img.addEventListener('click', () => {
+            overlayImg.src = img.src; // Set overlay image source to clicked image
+            overlay.style.display = 'flex'; // Show the overlay
+        });
+    });
+
+    // Event listener for clicking the close button
+    close.addEventListener('click', () => {
+        overlay.style.display = 'none'; // Hide the overlay
+        overlayImg.src = ''; // Clear the overlay image source
+    });
+
+    // Event listener for clicking outside the image to close
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none'; // Hide the overlay
+            overlayImg.src = ''; // Clear the overlay image source
+        }
+    });
+
+    // Smooth transitions for overlay
+    overlay.style.transition = 'opacity 0.3s ease-in-out';
+    overlayImg.style.transition = 'transform 0.3s ease-in-out';
+</script>
+
       </script>
   </body>
   </html>
