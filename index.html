@@ -193,21 +193,26 @@
             background-color: #d4ac0d;
         }
 
-        .navigation-btns {
+        /* Navigation Buttons */
+        .prev, .next {
             position: absolute;
             top: 50%;
             z-index: 2;
             transform: translateY(-50%);
-        }
-
-        .prev, .next {
             background-color: #3498db;
             color: white;
             padding: 15px;
             font-size: 1.5rem;
             cursor: pointer;
             border-radius: 50%;
-            margin: 0 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
         }
 
         .prev:hover, .next:hover {
@@ -270,34 +275,26 @@
         <div id="cert1" class="modal">
             <img src="certs/cs50.jpg" alt="CS50 Certificate">
             <span class="close-btn">&times;</span>
-            <div class="navigation-btns">
-                <button class="prev">&#8592;</button>
-                <button class="next">&#8594;</button>
-            </div>
+            <div class="prev" onclick="showModal('cert4')">&#8592;</div>
+            <div class="next" onclick="showModal('cert2')">&#8594;</div>
         </div>
         <div id="cert2" class="modal">
             <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
             <span class="close-btn">&times;</span>
-            <div class="navigation-btns">
-                <button class="prev">&#8592;</button>
-                <button class="next">&#8594;</button>
-            </div>
+            <div class="prev" onclick="showModal('cert1')">&#8592;</div>
+            <div class="next" onclick="showModal('cert3')">&#8594;</div>
         </div>
         <div id="cert3" class="modal">
             <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
             <span class="close-btn">&times;</span>
-            <div class="navigation-btns">
-                <button class="prev">&#8592;</button>
-                <button class="next">&#8594;</button>
-            </div>
+            <div class="prev" onclick="showModal('cert2')">&#8592;</div>
+            <div class="next" onclick="showModal('cert4')">&#8594;</div>
         </div>
         <div id="cert4" class="modal">
             <img src="certs/elementsofai.png" alt="AI Certificate">
             <span class="close-btn">&times;</span>
-            <div class="navigation-btns">
-                <button class="prev">&#8592;</button>
-                <button class="next">&#8594;</button>
-            </div>
+            <div class="prev" onclick="showModal('cert3')">&#8592;</div>
+            <div class="next" onclick="showModal('cert1')">&#8594;</div>
         </div>
     </section>
 
@@ -305,6 +302,21 @@
         <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
     </footer>
 
+    <script>
+        function showModal(certId) {
+            // Close all modals
+            document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+            // Show the selected modal
+            document.getElementById(certId).style.display = 'flex';
+        }
+
+        // Close button functionality
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.modal').style.display = 'none';
+            });
+        });
+    </script>
+
 </body>
 </html>
-
