@@ -1,192 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <h2>My Certifications</h2>
-        <ul>
-            <li><a href="#cert1" class="cert-link">Cert 1</a></li>
-            <li><a href="#cert2" class="cert-link">Cert 2</a></li>
-            <li><a href="#cert3" class="cert-link">Cert 3</a></li>
-            <li><a href="#cert4" class="cert-link">Cert 4</a></li>
-        </ul>
-    </section>
-
-    <!-- Certificate Modals -->
-    <div class="modal" id="cert1-modal">
-        <span class="close-btn" onclick="closeModal('#cert1')">×</span>
-        <h3>Certification 1 Details</h3>
-        <p>Description for Certification 1</p>
-    </div>
-    <div class="modal" id="cert2-modal">
-        <span class="close-btn" onclick="closeModal('#cert2')">×</span>
-        <h3>Certification 2 Details</h3>
-        <p>Description for Certification 2</p>
-    </div>
-    <div class="modal" id="cert3-modal">
-        <span class="close-btn" onclick="closeModal('#cert3')">×</span>
-        <h3>Certification 3 Details</h3>
-        <p>Description for Certification 3</p>
-    </div>
-    <div class="modal" id="cert4-modal">
-        <span class="close-btn" onclick="closeModal('#cert4')">×</span>
-        <h3>Certification 4 Details</h3>
-        <p>Description for Certification 4</p>
-    </div>
-
-    <!-- Projects Section -->
-    <section id="my-projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Web Platform (ProjectConnect-like)</h3>
-                <p>A team of five is working on a web platform similar to ProjectConnect, aimed at helping students collaborate and share educational resources.</p>
-            </div>
-            <div class="project">
-                <h3>Student Resource Website</h3>
-                <p>In collaboration with a partner, I am building a website compiling all available resources to help students find extracurricular opportunities.</p>
-            </div>
-            <div class="project">
-                <h3>Quiz Website</h3>
-                <p>This is a personal project that I completed, featuring a quiz platform designed using my front-end skills.</p>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Function to open the modal
-        function openModal(certId) {
-            document.querySelector(certId + '-modal').style.display = 'block';
-            window.location.hash = certId.substring(1); // Set the URL fragment
-        }
-
-        // Function to close the modal
-        function closeModal(certId) {
-            document.querySelector(certId + '-modal').style.display = 'none';
-            window.location.hash = ''; // Clear the URL fragment when closing modal
-        }
-
-        // Add event listeners to certificate links
-        document.querySelectorAll('.cert-link').forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-                openModal(this.getAttribute('href'));
-            });
-        });
-
-        // Add event listener for closing modal when clicking outside
-        window.addEventListener('click', function (event) {
-            if (event.target.classList.contains('modal')) {
-                closeModal('#' + event.target.id.replace('-modal', ''));
-            }
-        });
-
-        // Check for URL hash on page load and open corresponding modal if exists
-        window.addEventListener('load', function () {
-            if (window.location.hash) {
-                openModal('#' + window.location.hash.substring(1));
-            }
-        });
-    </script>
-
+    <title>Maryam Nawaz - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .close-btn {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-        }
-
-        .close-btn:hover,
-        .close-btn:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Projects Section Styles */
-        #my-projects {
-            padding: 40px;
-            background-color: #f4f4f9;
-            margin-top: 40px;
-            border-top: 1px solid #ddd;
-        }
-
-        #my-projects h2 {
-            text-align: center;
-            font-size: 2em;
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #f6f6f6, #e9e9e9);
             color: #333;
         }
 
-        .project-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
+        header {
+            background: linear-gradient(45deg, #8e44ad, #3498db);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .project {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #f1c40f;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right, #3498db, #8e44ad);
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #f1c40f;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #d4ac0d;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .certifications, .projects-preview {
+            padding: 50px 10%;
             text-align: center;
         }
 
-        .project h3 {
-            color: #0073e6;
+        .certifications h2, .projects-preview h2 {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 20px;
         }
 
-        .project p {
-            font-size: 1em;
-            color: #555;
+        .certificates-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
-        @media (max-width: 768px) {
-            .project-list {
-                grid-template-columns: 1fr 1fr;
+        .certificates-gallery a {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificates-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .certificates-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Modal Styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #d4ac0d;
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
             }
-        }
-
-        @media (max-width: 480px) {
-            .project-list {
-                grid-template-columns: 1fr;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
-</body>
+</head>
+<body>
+    <header>
+        <h1>Maryam Nawaz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="study_plan.html">Study Plan</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects, certifications, and everything I am passionate about!</p>
+            <a href="#certifications" class="btn">View My Certifications</a>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <h2>Certifications</h2>
+        <div class="certificates-gallery">
+            <a href="#cert1"><img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
+            <a href="#cert2"><img src="certs/softskills.jpg" alt="SoftSkills Certificate"></a>
+            <a href="#cert3"><img src="certs/volunteer.jpg" alt="Volunteer Certificate"></a>
+            <a href="#cert4"><img src="certs/elementsofai.png" alt="AI Certificate"></a>
+        </div>
+
+        <!-- Modal Popups -->
+        <div id="cert1" class="modal">
+            <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            <span class="close-btn">&times;</span>
+            <div class="prev" onclick="showModal('cert4')">&#8592;</div>
+            <div class="next" onclick="showModal('cert2')">&#8594;</div>
+        </div>
+        <div id="cert2" class="modal">
+            <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+            <span class="close-btn">&times;</span>
+            <div class="prev" onclick="showModal('cert1')">&#8592;</div>
+            <div class="next" onclick="showModal('cert3')">&#8594;</div>
+        </div>
+        <div id="cert3" class="modal">
+            <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
+            <span class="close-btn">&times;</span>
+            <div class="prev" onclick="showModal('cert2')">&#8592;</div>
+            <div class="next" onclick="showModal('cert4')">&#8594;</div>
+        </div>
+        <div id="cert4" class="modal">
+            <img src="certs/elementsofai.png" alt="AI Certificate">
+            <span class="close-btn">&times;</span>
+            <div class="prev" onclick="showModal('cert3')">&#8592;</div>
+            <div class="next" onclick="showModal('cert1')">&#8594;</div>
+        </div>
+    </section>
+
+    <!-- Projects Preview Section -->
+    <section class="projects-preview" id="projects">
+        <h2>Projects</h2>
+        <p>Explore my exciting projects that combine creativity and technology!</p>
+        <!-- You can add your project previews here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showModal(certId) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => modal.style.display = 'none');
+            document.getElementById(certId).style.display = 'flex';
+        }
+
+        // Close modal on clicking close button
+        document.querySelectorAll('.close-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => modal.style.display = 'none');
+            });
+        });
+    </script>
+</body>
 </html>
