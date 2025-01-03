@@ -1,19 +1,17 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Academic Journey</title>
+    <title>Maryam Nawaz - Academic Journey</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(120deg, #f6f6f6, #e9e9e9);
             color: #333;
         }
-
         header {
             background: linear-gradient(45deg, #8e44ad, #3498db);
             padding: 20px 50px;
@@ -23,41 +21,32 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #fff;
         }
-
-        .container {
+        section {
             padding: 20px;
+            margin: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-
-        .section {
-            margin-bottom: 40px;
+        h2 {
+            color: #8e44ad;
         }
-
-        .section h2 {
-            border-left: 5px solid #8e44ad;
-            padding-left: 10px;
-            color: #3498db;
-        }
-
-        .image-gallery {
+        .gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 20px;
         }
-
-        .image-gallery img {
-            width: 200px;
+        .gallery img {
+            width: 150px;
             height: 150px;
             object-fit: cover;
-            border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.3s;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
-
-        .image-gallery img:hover {
-            transform: scale(1.05);
+        .gallery img:hover {
+            transform: scale(1.1);
         }
-
         .overlay {
             position: fixed;
             top: 0;
@@ -65,98 +54,151 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.8);
-            display: none;
+            display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 1000;
+            display: none;
         }
-
         .overlay img {
-            width: 80%;
-            height: auto;
-            max-width: 900px;
-            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
         }
-
-        .overlay .close-btn {
+        .overlay .close {
             position: absolute;
             top: 20px;
             right: 20px;
+            color: #fff;
             font-size: 30px;
-            color: white;
             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
     <header>
-        <h1>My Academic Journey</h1>
+        <h1>Maryam Nawaz - My Academic Journey</h1>
     </header>
-
-    <div class="container">
-        <div class="section">
-            <h2>Primary Education</h2>
-            <p>During my primary years, I participated in a tableau at the funfair in 3rd grade.</p>
-            <div class="image-gallery">
-                <img src="certs/3GradeMe.jpg" alt="Tableau in 3rd Grade" onclick="showImage(this.src)">
-            </div>
+    <section>
+        <h2>Primary Education</h2>
+        <p>I attended Presentation Grammar School in Lahore, where I participated in a cultural tableau in 3rd grade.</p>
+        <div class="gallery">
+            <img src="certs/3GradeMe.jpg" alt="Tablo in Funfair">
         </div>
-
-        <div class="section">
-            <h2>8th Grade</h2>
-            <p>I achieved 1st position in my class and completed a solar system project.</p>
-            <div class="image-gallery">
-                <img src="certs/8GradeProject.png" alt="Solar System Project" onclick="showImage(this.src)">
-            </div>
+    </section>
+    <section>
+        <h2>Middle School Achievements</h2>
+        <p>In 8th grade, I achieved 1st position in class and created a solar system project.</p>
+        <div class="gallery">
+            <img src="certs/8GradeProject.png" alt="Solar System Project">
         </div>
-
-        <div class="section">
-            <h2>Matriculation (9th & 10th Grades)</h2>
-            <p>I received my character certificate and result card upon completing matriculation.</p>
-            <div class="image-gallery">
-                <img src="certs/character-certificate.jpg" alt="Character Certificate" onclick="showImage(this.src)">
-                <img src="certs/result-card.jpg" alt="Result Card" onclick="showImage(this.src)">
-            </div>
+    </section>
+    <section>
+        <h2>Matriculation (9th and 10th Grades)</h2>
+        <p>I received a character certificate and my result card after completing matriculation.</p>
+        <div class="gallery">
+            <img src="certs/character-certificate.jpg" alt="Character Certificate">
+            <img src="certs/result-card.jpg" alt="Result Card">
         </div>
-
-        <div class="section">
-            <h2>College Life</h2>
-            <p>Starting college was an exciting new chapter, as seen in these memorable moments.</p>
-            <div class="image-gallery">
-                <img src="certs/firstday.jpg" alt="First Day of College" onclick="showImage(this.src)">
-                <img src="certs/students.jpg" alt="With Fellow Students" onclick="showImage(this.src)">
-            </div>
+    </section>
+    <section>
+        <h2>Where I Am Now</h2>
+        <p>I am currently enrolled at Government Postgraduate College for Women, Lahore, focusing on Computer Science, Physics, and Mathematics.</p>
+        <div class="gallery">
+            <img src="certs/firstday.jpg" alt="First Day at College">
+            <img src="certs/students.jpg" alt="College Group Photo">
+            <img src="certs/2024.jpg" alt="College Life 2024">
         </div>
-
-        <div class="section">
-            <h2>Online Coursework</h2>
-            <p>I expanded my knowledge through various online courses that aligned with my aspirations.</p>
-            <div class="image-gallery">
-                <img src="certs/cs50.jpg" alt="CS50 Certificate" onclick="showImage(this.src)">
-                <img src="certs/softskills.jpg" alt="Soft Skills Certificate" onclick="showImage(this.src)">
-                <img src="certs/elementsofai.png" alt="Elements of AI Certificate" onclick="showImage(this.src)">
-                <img src="certs/volunteer.jpg" alt="Volunteer Work Certificate" onclick="showImage(this.src)">
-            </div>
+    </section>
+    <section>
+        <h2>Online Courses</h2>
+        <p>I have completed several online courses that align with my academic interests and career goals:</p>
+        <ul>
+            <li>CS50 by Harvard Online</li>
+            <li>Elements of AI</li>
+            <li>Soft Skills by Google</li>
+            <li>HP LIFE: Effective Business Websites</li>
+            <li>Hour of Code</li>
+        </ul>
+        <div class="gallery">
+            <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            <img src="certs/softskills.jpg" alt="Soft Skills Certificate">
+            <img src="certs/elementsofai.png" alt="Elements of AI Certificate">
+            <img src="certs/hplife.jpg" alt="HP LIFE Certificate">
+            <img src="certs/hourcode.jpg" alt="Hour of Code Certificate">
         </div>
-    </div>
-
+    </section>
+    <section>
+        <h2>My Vision and Aspirations</h2>
+        <p>I’m Maryam from Lahore, Pakistan, known as "The City of Gardens." Having recently completed my exams for the
+            third year of high school with a focus on Computer Science, Physics, and Mathematics, I stand at the threshold
+            of exciting opportunities in the tech world.</p>
+        <p>My fascination with technology began at an early age, fueled by the transformative power of user-friendly websites,
+            apps, and AI tools. This passion has blossomed into a commitment to become a full-fledged full-stack web developer.
+            I am particularly drawn to AI, with the ambition to develop tools that positively impact people's lives.</p>
+        <p>In my first year of high school, I engaged in Girl Guiding for five months, where I honed my teamwork, leadership,
+            and management skills. This experience, along with my participation in various extracurricular activities, has 
+            greatly contributed to my personal growth and confidence.</p>
+        <p>My coding skills flourished through the CS50: Introduction to Computer Science course offered by Harvard Online,
+            where I completed nine problem sets and a final project. This course deepened my understanding of programming 
+            languages, web development techniques, and the crucial art of problem-solving. Learning about databases, algorithms,
+            conditions, functions, and loops reshaped my perspective on coding, sparking an eagerness to refine my skills further.
+        </p>
+        <p>Alongside CS50, I completed courses in Web Development by SoloLearn and Effective Business Websites by HP LIFE. 
+            I applied my skills by developing a Rock-Paper-Scissors game and creating my portfolio website. Through both 
+            individual projects and group collaborations, I enhanced my teamwork capabilities, showcasing my work on my 
+            LinkedIn profile.</p>
+        <p>I also volunteered with Psych.4Teens, focusing on content creation to raise public awareness about mental health.
+            This experience underscored my belief in using technology to address societal challenges.</p>
+        <p>Driven by my passion for coding, I established a social club for like-minded beginners and intermediates, emphasizing 
+            project collaborations and networking in front-end and back-end development. Balancing the management of this club
+            with my studies and volunteering was challenging, but it significantly improved my organizational skills as I assumed 
+            roles such as vice president and manager.</p>
+        <p>As I look to the future, I am eager to continue my education in Coding and AI at [University Name]. This institution
+            stands out to me for its commitment to innovation and its strong community of aspiring tech leaders. I am particularly 
+            impressed by its curriculum and resources, which I believe will provide the ideal environment for my growth and 
+            development.</p>
+        <p>After completing my degree, I plan to establish my own software house and develop AI tools that reflect my passion 
+            and skills. I also wish to settle in [Country Name], drawn by its vibrant culture and lifestyle. While I understand
+            that transitioning to a new country will present challenges, I am excited about the opportunities it will bring.</p>
+        <p>You can find more about me on my portfolio website. I am enthusiastic about hearing responses and sharing my journey.
+            My high school experience was filled with new adventures and valuable learning, and I am eager to expand my knowledge
+            at [University Name].</p>
+    </section>
     <div class="overlay" id="overlay">
-        <span class="close-btn" onclick="closeImage()">&times;</span>
-        <img id="overlay-img" src="" alt="">
+        <span class="close" id="close">&times;</span>
+        <img src="" alt="" id="overlay-img">
     </div>
+   <script>
+    const images = document.querySelectorAll('.gallery img');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const close = document.getElementById('close');
 
-    <script>
-        function showImage(src) {
-            const overlay = document.getElementById('overlay');
-            const overlayImg = document.getElementById('overlay-img');
-            overlayImg.src = src;
-            overlay.style.display = 'flex';
-        }
+    // Event listener for clicking on gallery images
+    images.forEach((img) => {
+        img.addEventListener('click', () => {
+            overlayImg.src = img.src; // Set overlay image source to clicked image
+            overlay.style.display = 'flex'; // Show the overlay
+        });
+    });
 
-        function closeImage() {
-            const overlay = document.getElementById('overlay');
-            overlay.style.display = 'none';
+  
+    close.addEventListener('click', () => {
+        overlay.style.display = 'none'; 
+        overlayImg.src = ''; 
+    });
+
+  
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none'; 
+            overlayImg.src = '';
         }
-    </script>
-</body>
-</html>
+    });
+
+  
+    overlay.style.transition = 'opacity 0.3s ease-in-out';
+    overlayImg.style.transition = 'transform 0.3s ease-in-out';
+</script>
+
+       
