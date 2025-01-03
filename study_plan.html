@@ -8,7 +8,7 @@
         /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8; /* Consistent with home page background */
+            background-color: #f0f4f8; 
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -17,7 +17,7 @@
 
         h1, h2 {
             font-family: 'Lora', serif;
-            color: #2c3e50; /* Consistent with the home page */
+            color: #2c3e50; 
             font-weight: 700;
         }
 
@@ -35,7 +35,7 @@
             padding: 40px;
         }
 
-        /* 3D Card Style for Interactive Experience */
+        /* 3D Card Style */
         .card {
             background-color: white;
             border-radius: 15px;
@@ -59,7 +59,7 @@
         .card h2 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #ff6347; /* Accent color */
+            color: #ff6347; 
         }
 
         .card p {
@@ -67,7 +67,7 @@
             color: #555;
         }
 
-        /* Educational Section */
+        /* Education Table */
         .education-table {
             width: 100%;
             border-collapse: collapse;
@@ -85,7 +85,7 @@
             color: white;
         }
 
-        /* Full Screen Image */
+        /* Full-Screen Image Modal */
         .full-screen-image {
             display: none;
             position: fixed;
@@ -211,30 +211,26 @@
             <p>Alongside CS50, I completed courses in Web Development by SoloLearn and Effective Business Websites by HP LIFE. I applied my skills by developing a Rock-Paper-Scissors game and creating my portfolio website. Through both individual projects and group collaborations, I enhanced my teamwork capabilities, showcasing my work on my LinkedIn profile.</p>
             <p>I also volunteered with Psych.4Teens, focusing on content creation to raise public awareness about mental health. This experience underscored my belief in using technology to address societal challenges.</p>
             <p>Driven by my passion for coding, I established a social club for like-minded beginners and intermediates, emphasizing project collaborations and networking in front-end and back-end development. Balancing the management of this club with my studies and volunteering was challenging, but it significantly improved my organizational skills as I assumed roles such as vice president and manager.</p>
-            <p>As I look to the future, I am eager to continue my education in Coding and AI at [University Name]. This institution stands out to me for its commitment to innovation and its strong community of aspiring tech leaders. I am particularly impressed by its curriculum and resources, which I believe will provide the ideal environment for my growth and development.</p>
-            <p>In the coming years, I aim to focus on my areas of interest, including software engineering, AI, and full-stack development. Through ongoing projects and internships, I hope to further refine my coding and problem-solving skills, working on real-world applications that can make a difference.</p>
+            <p>As I look to the future, I am eager to continue my education in Coding and AI at [University Name], where I plan to collaborate with tech-focused communities and broaden my programming knowledge, preparing to become a leader in the tech industry.</p>
         </div>
+
     </div>
 
-    <!-- Full Screen Image Modal -->
-    <div class="full-screen-image" id="imageModal">
-        <button class="close-btn" onclick="closeModal()">Close</button>
-        <img src="" alt="Full-Screen Image" id="modalImage">
+    <!-- Full-Screen Image Modal -->
+    <div class="full-screen-image" id="fullscreenModal">
+        <span class="close-btn" onclick="closeModal()">X</span>
+        <img src="" id="fullscreenImage" alt="Certificate Image" />
     </div>
 
     <script>
         function showFullScreenImage(src) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            modal.style.display = 'flex';
-            modalImage.src = src;
+            document.getElementById('fullscreenImage').src = src;
+            document.getElementById('fullscreenModal').style.display = 'flex';
         }
 
         function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
+            document.getElementById('fullscreenModal').style.display = 'none';
         }
     </script>
-
 </body>
 </html>
