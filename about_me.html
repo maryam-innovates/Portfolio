@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Maryam Nawaz</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Global Styles */
-     body {
+        body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(120deg, #f6f6f6, #e9e9e9);
@@ -21,189 +21,142 @@
             align-items: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .navbar {
-            list-style: none;
-            padding: 0;
+
+        header h1 {
+            color: #fff;
             margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
-            justify-content: center;
+            margin: 0;
+            padding: 0;
         }
 
-        .navbar li {
-            margin: 0 15px;
+        nav ul li {
+            margin: 0 10px;
         }
 
-        .nav-link {
+        nav ul li a {
             text-decoration: none;
             color: #fff;
-            font-size: 18px;
-            transition: color 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        .nav-link:hover {
-            color: #ff7f50;
+        nav ul li a.active, nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
-        .nav-link.active {
-            color: #ff7f50;
-        }
-
-        /* Main Section Styles */
-        section {
-            padding: 40px 20px;
+        .about-section {
+            padding: 50px;
             text-align: center;
         }
 
-        /* About Me Section */
-        .about-me {
-            margin-bottom: 40px;
-        }
-
-        .about-me h2 {
-            font-size: 30px;
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #8e44ad;
             margin-bottom: 20px;
         }
 
-        .about-me p {
-            font-size: 18px;
+        .about-section p {
+            font-size: 1.1rem;
             line-height: 1.6;
+            margin: 10px auto;
+            max-width: 800px;
+        }
+
+        .favorites-section {
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .favorites-section h3 {
+            font-size: 1.8rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .favorites-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .favorites-section ul li {
             margin: 10px 0;
-            text-align: justify;
         }
 
-        .about-me img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-
-        /* Essay Section */
-        .essay-section {
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .essay-section h2 {
-            font-size: 25px;
-            color: #ff7f50;
-        }
-
-        .essay-section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        /* Study Plan Section */
-        .study-plan-section {
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .study-plan-section h2 {
-            font-size: 25px;
-            color: #ff7f50;
-        }
-
-        .study-plan-section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 10px 0;
+        .favorites-section ul li span {
+            font-weight: bold;
+            color: #8e44ad;
         }
 
         footer {
-            background-color: #333;
+            background: linear-gradient(45deg, #3498db, #8e44ad);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>Maryam Nawaz</h1>
         <nav>
-            <ul class="navbar">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li
-                <li><a href="study_plan.html" class="nav-link">Study Plan</a></li>
-               
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="study_plan.html">Study Plan</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about_me.html" class="active">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about-me">
+    <section class="about-section">
         <h2>About Me</h2>
-        <!-- Your Image Here -->
-        <img src="certs/maryam-photo.jpg" alt="Maryam Nawaz">
-        <p>
-            Hi, I'm Maryam Nawaz, a passionate learner and aspiring student from Lahore, Pakistan.
-            Currently studying at Govt Postgraduate College For Women, Lahore, I have always been 
-            interested in exploring fields like computer science, data science, and AI. Along with
-            my academic pursuits, I’m deeply involved in extracurricular activities that contribute
-            to both my personal and professional growth. My goal is to gain admission to a top 
-            university where I can pursue my dream of studying a dual degree in business and technology.
-        </p>
+        <p>Hey there! I’m Maryam Nawaz, and I’m excited to share a bit about myself. This is not just a collection of 
+            achievements but a true reflection of my personality, interests, and passions. I believe in embracing who
+            I am—quirks, passions, and all.</p>
     </section>
 
-    <section class="essay-section">
-        <h2>My Essay: Why I Want to Study in a Prestigious University</h2>
-        <p>
-            Ever since I was a child, I have been fascinated by the ever-evolving world of technology 
-            and its potential to solve real-world problems. I have always been driven by the idea that
-            with the right tools and mindset, technology can be used to create innovative solutions to 
-            complex challenges. This passion for technology, combined with my desire to make a meaningful 
-            impact on the world, is what motivates me to pursue higher education at a prestigious university.
-        </p>
-        <p>
-            My dream is to study a dual degree in business and technology, with a focus on artificial intelligence
-            and data science. I believe that understanding the intersection of business and technology will equip me 
-            with the skills needed to develop solutions that can help businesses thrive in the digital age. In 
-            addition, I hope to leverage this knowledge to contribute to the development of AI solutions that can
-            an address critical global challenges.
-        </p>
-        <p>
-            Attending a prestigious university will provide me with access to world-class professors, resources, and
-            research opportunities that will enable me to deepen my knowledge in these fields. I am eager to engage in 
-            rigorous academic programs, participate in cutting-edge research projects, and learn from experts in the field. 
-            I am also excited to connect with like-minded peers who share my passion for technology and innovation.
-        </p>
-        <p>
-            I am confident that studying at such a university will not only help me achieve my academic and professional 
-            goals but also enable me to contribute to society by developing impactful solutions through technology.
-        </p>
+    <section class="favorites-section">
+        <h3>Favorites</h3>
+        <ul>
+            <li><span>Favorite Music:</span> I enjoy all kinds, but phonk and softcore are my vibe.</li>
+            <li><span>Favorite Sport:</span> Football, cricket, tennis, and F1 racing (Team Ferrari before 2024,
+                now rooting for players across teams).</li>
+            <li><span>Favorite Book:</span> The Holy Quran—its wisdom and lessons inspire me every time.</li>
+            <li><span>Favorite TV Show:</span> Anime, manhwa, and manga. My firsts: Death Note, Moriarty the Patriot, 
+                and Who Made Me a Princess.</li>
+            <li><span>Favorite Food:</span> Rice, simple yet versatile.</li>
+            <li><span>Favorite Hobby:</span> Reading lores, writing, and self-care.</li>
+        </ul>
     </section>
 
-    <section class="study-plan-section">
-        <h2>My Study Plan</h2>
-        <p>
-            My study plan is designed to prepare me for a successful career in both business and technology. 
-            In the first year, I plan to take foundational courses in computer science and business to build a
-            strong understanding of both fields. These courses will help me gain a deep understanding of 
-            programming, algorithms, and data structures, as well as key business concepts such as management,
-            marketing, and finance.
-        </p>
-        <p>
-            In subsequent years, I plan to specialize in artificial intelligence and data science. I will take advanced
-            courses in machine learning, deep learning, and big data analytics, while also exploring the ethical implications 
-            of AI. I also plan to gain practical experience by participating in internships and working on real-world projects
-            that will allow me to apply my knowledge and skills.
-        </p>
-        <p>
-            Beyond academics, I am committed to developing my leadership and communication skills through extracurricular 
-            activities and volunteer work. I believe that these skills are essential for becoming a well-rounded professional
-            who can contribute to the global tech community.
-        </p>
-        <p>
-            I am excited to embark on this journey and look forward to the challenges and opportunities that lie ahead. 
-            With dedication and hard work, I am confident that I will achieve my goals and make a positive impact in the 
-            world of technology.
-        </p>
+    <section class="favorites-section">
+        <h3>Fun Facts</h3>
+        <p>I’m sometimes called an "inhumane robot" because of my straight face, but I’m full of life! I love exploring, 
+            traveling, and embracing new experiences. Oh, and you can connect with me on Instagram at 
+            <a href="https://www.instagram.com/hii_maryamm">@hii_maryamm</a>.</p>
     </section>
+
     <footer>
-        <p>Contact: <a href="mailto:maryamstudent0430@gmail.com">maryamstudent0430@gmail.com</a></p>
+        <p>&copy; 2025 Maryam Nawaz. All rights reserved. <a href="mailto:maryamstudent0430@gmail.com">Email Me</a></p>
     </footer>
 </body>
 </html>
-
-          
