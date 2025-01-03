@@ -3,215 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz - Portfolio</title>
+    <title>My Certificates</title>
     <style>
-        /* Basic styles for the page */
+        /* Basic styling for the page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        /* Header Section */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-        header h1 {
-            margin: 0;
-            text-align: center;
-        }
-        header nav ul {
-            list-style: none;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-        header nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        header nav ul li a.active {
-            font-weight: bold;
-        }
-
-        /* Hero Section */
-        .hero {
             background-color: #f4f4f4;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        .hero .btn {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
         }
 
-        /* Certifications Section */
-        section {
-            padding: 40px;
+        h1 {
             text-align: center;
+            margin-top: 20px;
         }
 
-        /* Modal Styles */
+        .certificates {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .certificate {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .certificate img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Modal styling */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
-        }
-        .modal img {
-            width: 80%;
-            max-width: 500px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 36px;
-            color: white;
-            cursor: pointer;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            font-size: 36px;
-            color: white;
-            cursor: pointer;
-            transform: translateY(-50%);
-        }
-        .prev {
-            left: 10px;
-        }
-        .next {
-            right: 10px;
+            align-items: center;
         }
 
-        /* Footer Section */
-        footer {
-            background-color: #333;
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
             color: white;
-            padding: 20px;
-            text-align: center;
+            cursor: pointer;
+        }
+
+        .prev-btn,
+        .next-btn {
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Maryam Nawaz</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="study_plan.html">Study Plan</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about_me.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>My Certificates</h1>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Discover my projects, certifications, and everything I am passionate about!</p>
-            <a href="#certifications" class="btn">View My Certifications</a>
+    <section class="certificates">
+        <div class="certificate">
+            <a href="#" onclick="showModal(0)">
+                <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            </a>
+        </div>
+        <div class="certificate">
+            <a href="#" onclick="showModal(1)">
+                <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+            </a>
+        </div>
+        <div class="certificate">
+            <a href="#" onclick="showModal(2)">
+                <img src="certs/webdev.jpg" alt="WebDev Certificate">
+            </a>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2>My Certifications</h2>
-        <div class="certificates">
-            <img src="certs/certificate1.png" alt="Certificate 1" onclick="showModal(0)">
-            <img src="certs/certificate2.png" alt="Certificate 2" onclick="showModal(1)">
-            <img src="certs/certificate3.png" alt="Certificate 3" onclick="showModal(2)">
-            <img src="certs/elementsofai.png" alt="AI Certificate" onclick="showModal(3)">
-        </div>
-    </section>
-
-    <!-- Projects Preview Section -->
-    <section class="projects-preview" id="projects">
-        <h2>Projects</h2>
-        <p>Explore my exciting projects that combine creativity and technology!</p>
-        <!-- You can add your project previews here -->
-    </section>
-
-    <!-- Modal for displaying certificates -->
-    <div id="modal0" class="modal">
-        <img src="certs/certificate1.png" alt="Certificate 1">
-        <span class="close-btn" onclick="closeModal(0)">&times;</span>
-        <div class="prev" onclick="showModal(3)">&#8592;</div>
-        <div class="next" onclick="showModal(1)">&#8594;</div>
+    <!-- Modal Image Views -->
+    <div class="modal" id="cert1">
+        <span class="close-btn" onclick="closeModal(0)">×</span>
+        <img src="certs/cs50.jpg" alt="CS50 Certificate">
+        <button class="prev-btn" onclick="navigateImage(-1)">←</button>
+        <button class="next-btn" onclick="navigateImage(1)">→</button>
     </div>
 
-    <div id="modal1" class="modal">
-        <img src="certs/certificate2.png" alt="Certificate 2">
-        <span class="close-btn" onclick="closeModal(1)">&times;</span>
-        <div class="prev" onclick="showModal(0)">&#8592;</div>
-        <div class="next" onclick="showModal(2)">&#8594;</div>
+    <div class="modal" id="cert2">
+        <span class="close-btn" onclick="closeModal(1)">×</span>
+        <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+        <button class="prev-btn" onclick="navigateImage(-1)">←</button>
+        <button class="next-btn" onclick="navigateImage(1)">→</button>
     </div>
 
-    <div id="modal2" class="modal">
-        <img src="certs/certificate3.png" alt="Certificate 3">
-        <span class="close-btn" onclick="closeModal(2)">&times;</span>
-        <div class="prev" onclick="showModal(1)">&#8592;</div>
-        <div class="next" onclick="showModal(3)">&#8594;</div>
+    <div class="modal" id="cert3">
+        <span class="close-btn" onclick="closeModal(2)">×</span>
+        <img src="certs/webdev.jpg" alt="WebDev Certificate">
+        <button class="prev-btn" onclick="navigateImage(-1)">←</button>
+        <button class="next-btn" onclick="navigateImage(1)">→</button>
     </div>
 
-    <div id="modal3" class="modal">
-        <img src="certs/elementsofai.png" alt="AI Certificate">
-        <span class="close-btn" onclick="closeModal(3)">&times;</span>
-        <div class="prev" onclick="showModal(2)">&#8592;</div>
-        <div class="next" onclick="showModal(0)">&#8594;</div>
-    </div>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
+        <p>&copy; 2025 Maryam Nawaz. All Rights Reserved.</p>
     </footer>
 
     <script>
-        let currentModalIndex = -1; // To keep track of the current modal being displayed
+        // Handle opening modals
+        let modalIndex = -1;
+        const modals = document.querySelectorAll('.modal');
 
-        // Show modal based on the index
         function showModal(index) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => modal.style.display = 'none'); // Hide all modals
-            document.getElementById('modal' + index).style.display = 'flex'; // Show selected modal
-            currentModalIndex = index; // Update current modal index
+            modalIndex = index;
+            modals[modalIndex].style.display = 'flex';
         }
 
-        // Close modal
+        // Close modal function
         function closeModal(index) {
-            document.getElementById('modal' + index).style.display = 'none'; // Close the modal
-            currentModalIndex = -1; // Reset current modal index
+            modals[index].style.display = 'none';
+        }
+
+        // Function to handle navigation between modals
+        function navigateImage(direction) {
+            modals[modalIndex].style.display = 'none';
+            modalIndex = (modalIndex + direction + modals.length) % modals.length;
+            modals[modalIndex].style.display = 'flex';
         }
     </script>
-
 </body>
 </html>
