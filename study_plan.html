@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz's Study Plan Journey</title>
+    <title>Maryam Nawaz's Educational Journey</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f9;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
             margin: 0;
             padding: 0;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background: #4CAF50;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             font-size: 36px;
-        }
-        section {
-            padding: 20px;
+            margin: 0;
         }
         .container {
-            max-width: 1200px;
+            width: 80%;
             margin: 0 auto;
+            padding: 20px 0;
         }
         .intro {
             text-align: center;
@@ -39,25 +39,26 @@
             justify-content: center;
         }
         .timeline-item {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 10px;
             width: 280px;
             padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform 0.3s ease-in-out;
         }
         .timeline-item:hover {
-            transform: translateY(-10px);
+            transform: perspective(1000px) rotateY(10deg);
         }
         .timeline-item img {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
         .timeline-item h3 {
             font-size: 24px;
-            margin: 15px 0;
+            margin: 10px 0;
         }
         .timeline-item p {
             font-size: 16px;
@@ -69,19 +70,19 @@
             margin-top: 40px;
         }
         .cta a {
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 12px 25px;
+            background: #4CAF50;
             color: white;
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background 0.3s;
         }
         .cta a:hover {
-            background-color: #45a049;
+            background: #45a049;
         }
         footer {
-            background-color: #333;
+            background: #333;
             color: white;
             text-align: center;
             padding: 15px;
@@ -96,80 +97,66 @@
 </head>
 <body>
     <header>
-        <h1>Maryam Nawaz's Study Plan Journey</h1>
+        <h1>Maryam Nawaz's Educational Journey</h1>
     </header>
 
-    <section class="intro">
-        <div class="container">
+    <div class="container">
+        <section class="intro">
             <p>Welcome to my personal journey of learning and growth. From my early school days to now, my story has been about overcoming challenges and pursuing my passions. Let’s walk through it together.</p>
-        </div>
-    </section>
+        </section>
 
-    <section class="timeline">
-        <div class="timeline-item">
-            <img src="certs/3GradeMe.jpg" alt="Third Grade">
-            <h3>Third Grade - The Beginning</h3>
-            <p>I started becoming aware of my surroundings and participated in a table drama. It was my first experience stepping out of my comfort zone and trying something new!</p>
-        </div>
+        <section class="timeline">
+            <div class="timeline-item">
+                <img src="path/to/3rd-grade-image.jpg" alt="Third Grade">
+                <h3>Third Grade - The Beginning</h3>
+                <p>I started becoming aware of my surroundings and participated in a table drama. It was my first experience stepping out of my comfort zone and trying something new!</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="your-image-path/fifth-grade.jpg" alt="Fifth Grade">
-            <h3>Fifth Grade - New Beginnings</h3>
-            <p>Skipping grades and joining a new school made me embrace change. I began my journey with more confidence and a passion for learning.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/5th-grade-image.jpg" alt="Fifth Grade">
+                <h3>Fifth Grade - New Beginnings</h3>
+                <p>Skipping grades and joining a new school made me embrace change. I began my journey with more confidence and a passion for learning.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="certs/8GradeProject.png" alt="Eighth Grade">
-            <h3>Eighth Grade - A New School</h3>
-            <p>In my new school, I secured the top position in my class and joined the Girl Guides for a few months. This was a time of leadership and personal growth.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/8th-grade-image.jpg" alt="Eighth Grade">
+                <h3>Eighth Grade - A New School</h3>
+                <p>In my new school, I secured the top position in my class and joined the Girl Guides for a few months. This was a time of leadership and personal growth.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="certs/SnapMe.jpg" alt="Ninth Grade">
-            <h3>Ninth Grade - A Shift in Focus</h3>
-            <p>As I delved deeper into subjects like Biology, Chemistry, and Physics, I realized the importance of balancing academics and extracurriculars. I left Girl Guides to focus more on my studies.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/9th-grade-image.jpg" alt="Ninth Grade">
+                <h3>Ninth Grade - A Shift in Focus</h3>
+                <p>As I delved deeper into subjects like Biology, Chemistry, and Physics, I realized the importance of balancing academics and extracurriculars. I left Girl Guides to focus more on my studies.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="certs/result-card.jpg" alt="Tenth Grade">
-            <h3>Tenth Grade - Hard Work Pays Off</h3>
-            <p>After a lot of hard work, I scored 76% overall. This was a testament to my commitment and perseverance, and it motivated me to keep pushing forward.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/10th-grade-image.jpg" alt="Tenth Grade">
+                <h3>Tenth Grade - Hard Work Pays Off</h3>
+                <p>After a lot of hard work, I scored 76% overall. This was a testament to my commitment and perseverance, and it motivated me to keep pushing forward.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="your-image-path/summer-learning.jpg" alt="Summer Learning">
-            <h3>Summer Break - Exploring Tech</h3>
-            <p>During the summer, I started learning computer science and built a website where I stored my favorite anime and manga. This was the beginning of my tech journey.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/summer-learning-image.jpg" alt="Summer Learning">
+                <h3>Summer Break - Exploring Tech</h3>
+                <p>During the summer, I started learning computer science and built a website where I stored my favorite anime and manga. This was the beginning of my tech journey.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="certs/students.jpg" alt="College Life">
-            <h3>College - The Next Chapter</h3>
-            <p>Getting into college was a huge milestone. I started attending assemblies and got involved with my peers. I also began taking courses related to my field, like CS50, soft skills, and AI.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/college-life-image.jpg" alt="College Life">
+                <h3>College - The Next Chapter</h3>
+                <p>Getting into college was a huge milestone. I started attending assemblies and got involved with my peers. I also began taking courses related to my field, like CS50, soft skills, and AI.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="your-image-path/cs50-project.jpg" alt="CS50 Final Project">
-            <h3>CS50 Project - Rock Paper Scissors</h3>
-            <p>For my CS50 final project, I developed a simple rock-paper-scissors game, which helped me understand core programming concepts.</p>
-        </div>
+            <div class="timeline-item">
+                <img src="path/to/cs50-project-image.jpg" alt="CS50 Final Project">
+                <h3>CS50 Project - Rock Paper Scissors</h3>
+                <p>For my CS50 final project, I developed a simple rock-paper-scissors game, which helped me understand core programming concepts.</p>
+            </div>
 
-        <div class="timeline-item">
-            <img src="certs/volunteer.jpg" alt="Volunteer Work">
-            <h3>Volunteering - Giving Back</h3>
-            <p>I began volunteering at college, contributing to social work projects. This experience fueled my passion for community service.</p>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <p>If you're interested in my journey or learning more about my college, feel free to explore:</p>
-            <a href="https://ggcwbbp.edu.pk/" target="_blank">Visit My College Website</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Maryam Nawaz | All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <div class="timeline-item">
+                <img src="path/to/volunteer-work-image.jpg" alt="Volunteer Work">
+                <h3>Volunteering - Giving Back</h3>
+                <p>I began volunteering at college, contributing to
+::contentReference[oaicite:0]{index=0}
+ 
