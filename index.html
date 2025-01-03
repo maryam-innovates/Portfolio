@@ -303,20 +303,18 @@
     </footer>
 
     <script>
+        // JavaScript for Modal Navigation
         function showModal(certId) {
-            // Close all modals
-            document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-            // Show the selected modal
-            document.getElementById(certId).style.display = 'flex';
+            document.getElementById(certId).style.display = "flex";
         }
 
         // Close button functionality
-        document.querySelectorAll('.close-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('.modal').style.display = 'none';
+        const closeBtns = document.querySelectorAll('.close-btn');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
             });
         });
     </script>
-
 </body>
 </html>
