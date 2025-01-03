@@ -3,317 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Nawaz - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My Certificates</title>
     <style>
-        /* General Styles */
+        /* Basic styling for the page */
         body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #f6f6f6, #e9e9e9);
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(45deg, #8e44ad, #3498db);
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            color: white;
-            margin: 0;
-            font-size: 1.8rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: #f1c40f;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        h1 {
             text-align: center;
-            background: linear-gradient(to right, #3498db, #8e44ad);
-            color: white;
-            position: relative;
+            margin-top: 20px;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .hero-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            text-decoration: none;
-            background: #f1c40f;
-            color: #333;
-            padding: 10px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: #d4ac0d;
-            color: white;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .certifications, .projects-preview {
-            padding: 50px 10%;
-            text-align: center;
-        }
-
-        .certifications h2, .projects-preview h2 {
-            font-size: 2rem;
-            color: #3498db;
-            margin-bottom: 20px;
-        }
-
-        .certificates-gallery {
+        .certificates {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
-            padding: 20px;
+            margin-top: 20px;
         }
 
-        .certificates-gallery a {
+        .certificate {
+            position: relative;
             display: inline-block;
-            width: 150px;
-            height: 150px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
-        .certificates-gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
+        .certificate img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
         }
 
-        .certificates-gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Modal Styling */
+        /* Modal styling */
         .modal {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
         }
 
         .modal img {
             max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .modal:target {
-            display: flex;
+            max-height: 80%;
+            border-radius: 8px;
         }
 
         .close-btn {
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: #f1c40f;
-            color: #333;
-            padding: 10px 15px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 30px;
+            color: white;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .close-btn:hover {
-            background-color: #d4ac0d;
-        }
-
-        .prev-btn, .next-btn {
+        .prev-btn,
+        .next-btn {
             position: absolute;
             top: 50%;
-            background: rgba(0, 0, 0, 0.5);
             color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.5rem;
+            font-size: 40px;
             cursor: pointer;
-            transform: translateY(-50%);
-            z-index: 1001;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
         }
 
-        .prev-btn { left: 20px; }
-        .next-btn { right: 20px; }
-
-        .projects-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .prev-btn {
+            left: 10px;
         }
 
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: #8e44ad;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            margin: 10px 0;
-        }
-
-        .project-card .btn {
-            font-size: 0.9rem;
-            padding: 8px 15px;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .next-btn {
+            right: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Maryam Nawaz</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="study_plan.html">Study Plan</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about_me.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Discover my projects, certifications, and everything I am passionate about!</p>
-            <a href="#certifications" class="btn">View My Certifications</a>
+    <h1>My Certificates</h1>
+
+    <section class="certificates">
+        <div class="certificate">
+            <a href="#" onclick="showModal(0)">
+                <img src="certs/cs50.jpg" alt="CS50 Certificate">
+            </a>
         </div>
-    </section>
-
-    <section class="certifications" id="certifications">
-        <h2>Certifications</h2>
-        <div class="certificates-gallery">
-            <a href="#cert1"><img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
-            <a href="#cert2"><img src="certs/softskills.jpg" alt="SoftSkills Certificate"></a>
-            <a href="#cert3"><img src="certs/volunteer.jpg" alt="Volunteer Certificate"></a>
+        <div class="certificate">
+            <a href="#" onclick="showModal(1)">
+                <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
+            </a>
+        </div>
+        <div class="certificate">
+            <a href="#" onclick="showModal(2)">
+                <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
+            </a>
         </div>
     </section>
 
     <!-- Modal Image Views -->
     <div class="modal" id="cert1">
-        <span class="close-btn">×</span>
+        <span class="close-btn" onclick="closeModal(0)">×</span>
         <img src="certs/cs50.jpg" alt="CS50 Certificate">
         <button class="prev-btn" onclick="navigateImage(-1)">←</button>
         <button class="next-btn" onclick="navigateImage(1)">→</button>
     </div>
 
     <div class="modal" id="cert2">
-        <span class="close-btn">×</span>
+        <span class="close-btn" onclick="closeModal(1)">×</span>
         <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
         <button class="prev-btn" onclick="navigateImage(-1)">←</button>
         <button class="next-btn" onclick="navigateImage(1)">→</button>
     </div>
 
     <div class="modal" id="cert3">
-        <span class="close-btn">×</span>
+        <span class="close-btn" onclick="closeModal(2)">×</span>
         <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
         <button class="prev-btn" onclick="navigateImage(-1)">←</button>
         <button class="next-btn" onclick="navigateImage(1)">→</button>
@@ -324,29 +136,29 @@
     </footer>
 
     <script>
-        // Function to handle navigation between modals
-        let modalIndex = 0;
+        // Handle opening modals
+        let modalIndex = -1;
         const modals = document.querySelectorAll('.modal');
 
+        function showModal(index) {
+            modalIndex = index;
+            modals[modalIndex].style.display = 'flex';
+        }
+
+        // Close modal function
+        function closeModal(index) {
+            modals[index].style.display = 'none';
+        }
+
+        // Function to handle navigation between modals
         function navigateImage(direction) {
             modals[modalIndex].style.display = 'none';
             modalIndex = (modalIndex + direction + modals.length) % modals.length;
             modals[modalIndex].style.display = 'flex';
         }
-
-        // Highlight text when clicked or copied
-        document.addEventListener('mousedown', function (e) {
-            if (e.target && e.target.nodeName === 'P') {
-                e.target.style.backgroundColor = '#f1c40f';
-            }
-        });
-
-        document.addEventListener('copy', function () {
-            const selection = window.getSelection().toString();
-            if (selection) {
-                alert('Text Copied!');
-            }
-        });
     </script>
 </body>
 </html>
+
+
+  
