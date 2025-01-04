@@ -247,6 +247,24 @@
                 transform: translateY(0);
             }
         }
+
+         .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        
     </style>
 </head>
 <body>
@@ -274,29 +292,11 @@
 
     <section class="certifications" id="certifications">
         <h2>Certifications</h2>
-        <div class="certificates-gallery">
+        <div class="gallery">
         <img src="certs/cs50.jpg" alt="CS50 Certificate"></a>
         <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
         <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
         <img src="certs/elementsofai.png" alt="AI Certificate">
-        </div>
-
-        <!-- Modal Popups -->
-        <div id="cert1" class="modal">
-            <img src="certs/cs50.jpg" alt="CS50 Certificate">
-            <span class="close-btn">&times;</span>
-        </div>
-        <div id="cert2" class="modal">
-            <img src="certs/softskills.jpg" alt="SoftSkills Certificate">
-            <span class="close-btn">&times;</span>
-        </div>
-        <div id="cert3" class="modal">
-            <img src="certs/volunteer.jpg" alt="Volunteer Certificate">
-            <span class="close-btn">&times;</span>
-        </div>
-        <div id="cert4" class="modal">
-            <img src="certs/elementsofai.png" alt="AI Certificate">
-            <span class="close-btn">&times;</span>
         </div>
     </section>
 
@@ -320,14 +320,57 @@
         <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Close modal function
-        const closeButtons = document.querySelectorAll('.close-btn');
-        closeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                button.parentElement.style.display = 'none';
-            });
+<script>
+    const images = document.querySelectorAll('.gallery img');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const close = document.getElementById('close');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    // Function to show the overlay with the clicked image
+    function showImage(index) {
+        overlayImg.src = images[index].src;
+        overlay.style.display = 'flex';
+        currentIndex = index;
+    }
+
+    // Event listener for clicking on gallery images
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            showImage(index);
         });
-    </script>
+    });
+
+    // Event listener for clicking the close button
+    close.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        overlayImg.src = '';
+    });
+
+    // Event listener for clicking outside the image to close
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+            overlayImg.src = '';
+        }
+    });
+
+    // Event listeners for navigation buttons
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Smooth transitions for overlay
+    overlay.style.transition = 'opacity 0.3s ease-in-out';
+    overlayImg.style.transition = 'transform 0.3s ease-in-out';
+</script>
 </body>
 </html> 
