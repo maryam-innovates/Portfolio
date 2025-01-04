@@ -110,45 +110,34 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .certifications, .projects-preview {
+        .projects-preview {
             padding: 50px 10%;
             text-align: center;
         }
 
-        .certifications h2, .projects-preview h2 {
+        .projects-preview h2 {
             font-size: 2rem;
             color: #3498db;
             margin-bottom: 20px;
         }
 
-        .gallery {
+          .gallery {
             display: flex;
-            justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            padding: 20px;
+            gap: 15px;
         }
-
-        .gallery a {
-            display: inline-block;
+        .gallery img {
             width: 150px;
             height: 150px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
+            cursor: pointer;
+            border-radius: 10px;
             transition: transform 0.3s ease;
         }
-
-        .certificates-gallery img:hover {
+        .gallery img:hover {
             transform: scale(1.1);
         }
-
+        
         /* Modal Styling */
 
         .close-btn {
@@ -223,24 +212,6 @@
                 transform: translateY(0);
             }
         }
-
-         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-        
     </style>
 </head>
 <body>
