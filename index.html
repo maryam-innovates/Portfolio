@@ -252,6 +252,54 @@
                 padding: 8px 15px;
             }
         }
+
+          .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .overlay .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .overlay .nav-btn {
+            position: absolute;
+            top: 50%;
+            font-size: 30px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .overlay .nav-left {
+            left: 10px;
+            transform: translateY(-50%);
+        }
+        .overlay .nav-right {
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        ::selection {
+            background-color:yellow;
+        }
     </style>
 </head>
 <body>
