@@ -139,22 +139,6 @@
             transform: scale(1.1);
         }
 
-        .projects-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -300,6 +284,39 @@
         ::selection {
             background-color:yellow;
         }
+        
+                .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center align on smaller screens */
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(33.33% - 40px); /* Adjust for three cards in a row */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        /* For devices less than 768px (Tablets) */
+        @media (max-width: 768px) {
+            .project-card {
+                width: calc(50% - 40px); /* Two cards per row */
+            }
+        }
+        
+        /* For devices less than 480px (Mobile Phones) */
+        @media (max-width: 480px) {
+            .project-card {
+                width: calc(100% - 40px); /* Single column */
+                margin: 10px auto; /* Center horizontally */
+            }
+        }
+
     </style>
 </head>
 <body>
