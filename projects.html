@@ -14,31 +14,36 @@
 
         header {
             background: linear-gradient(45deg, #8e44ad, #3498db);
-            padding: 20px 50px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
             color: white;
+            font-size: 1.5rem;
         }
 
         header nav ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         header nav ul li {
-            display: inline;
-            margin-right: 20px;
+            margin: 0;
         }
 
         header nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 1rem;
         }
 
         header nav ul li a:hover {
@@ -46,7 +51,7 @@
         }
 
         .projects-container {
-            padding: 50px;
+            padding: 30px 10px;
             max-width: 1000px;
             margin: 0 auto;
             background: white;
@@ -57,20 +62,20 @@
         .projects-container h2 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
 
         .projects-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-top: 30px;
+            gap: 20px;
         }
 
         .project-card {
-            width: 30%;
+            flex: 1 1 calc(30% - 20px); /* Flexible width minus the gap */
             background-color: #f8f8f8;
             padding: 20px;
-            margin: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -101,37 +106,22 @@
             background-color: yellow;
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
-            .project-card {
-                width: 45%;
-            }
-
             header {
-                flex-wrap: wrap;
-                padding: 20px;
-                text-align: center;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
             header nav ul {
-                display: flex;
-                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            .projects-list {
                 justify-content: center;
-                margin-top: 10px;
             }
 
-            header nav ul li {
-                margin-right: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
             .project-card {
-                width: 100%;
-            }
-
-            .projects-container {
-                padding: 20px;
+                flex: 1 1 calc(100% - 20px); /* Full width on smaller screens */
             }
         }
     </style>
@@ -157,25 +147,24 @@
         <!-- Project 1 -->
         <div class="project-card">
             <h3>Quiz Website</h3>
-            <p>I developed This web-based quiz application using HTML, CSS, and JavaScript. It allows users to take
-                quizzes on various topics.</p>
+            <p>This is a web-based quiz application I developed using HTML, CSS, and JavaScript. It allows users to take quizzes on various topics.</p>
         </div>
         <!-- Project 2 -->
         <div class="project-card">
             <h3>Student Resource Website</h3>
-            <p>A website I built in collaboration with a partner to compile resources for students looking for 
-                extracurricular activities and personal growth opportunities.</p>
+            <p>A website I built in collaboration with a partner to compile resources for students looking for extracurricular activities and personal growth opportunities.</p>
         </div>
         <!-- Project 3 -->
         <div class="project-card">
             <h3>Web Platform (Team Project)</h3>
-            <p>In this project, I am part of a team working to create a platform similar to ProjectConnect. It's an 
-                ongoing collaboration to make a unique platform for students.</p>
+            <p>In this project, I am part of a team working to create a platform similar to ProjectConnect. It's an ongoing collaboration to make a unique platform for students.</p>
         </div>
     </div>
 </section>
+
 <footer>
     <p>&copy; 2025 Maryam Nawaz. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
